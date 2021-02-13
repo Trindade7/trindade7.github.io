@@ -17,7 +17,9 @@
 </svelte:head>
 
 <div class="posts container p-4 pt-10">
-	<h4 class="font-bold text-corporateDark-primary py-7">Recent posts</h4>
+	<h4 class="font-bold uppercase text-corporateDark-primary py-5">
+		experience
+	</h4>
 
 	<ul>
 		{#each posts as post}
@@ -31,7 +33,7 @@
 					rel="prefetch"
 					href="blog/{post.slug}">{post.title}</a
 				>
-				<p class="text-lg py-2">
+				<p class="py-2">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
 					repudiandae eum vero officiis ipsa odio praesentium optio maxime
 					voluptates. Tempore eius nemo architecto pariatur numquam accusamus

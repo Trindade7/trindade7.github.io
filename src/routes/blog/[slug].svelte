@@ -23,16 +23,16 @@
 
 <div class="container p-4 pt-10">
 	<h4
-		class="text-2xl font-bold text-corporateDark-primary uppercase"
+		class="text-lg font-bold text-corporateDark-primary uppercase"
 		rel="prefetch"
 	>
-		category
+		experience
 	</h4>
-	<h1 class="text-7xl font-bold font-serif py-4" rel="prefetch">
+	<h1 class="text-5xl font-bold font-serif py-4" rel="prefetch">
 		{post.title}
 	</h1>
 
-	<div class="content container mx-auto py-4">
+	<div class="content container text-lg mx-auto py-4">
 		{@html post.html}
 	</div>
 </div>

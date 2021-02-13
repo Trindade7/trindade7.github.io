@@ -13,7 +13,7 @@
 	</a>
 	<div class="flex items-center ">
 		<a aria-current={segment === undefined ? "page" : undefined} href=".">
-			<h1 class="font-serif font-bold text-4xl pl-4">Trindade</h1>
+			<h1 class="font-bold pl-4">Trindade</h1>
 		</a>
 	</div>
 
@@ -44,7 +44,7 @@
 
 	<ButtonIcon>
 		<svg
-			class="  w-10 h-10"
+			class="  w-8 h-8"
 			xmlns="http://www.w3.org/2000/svg"
 			enable-background="new 0 0 24 24"
 			height="24"
@@ -65,7 +65,7 @@
 	<div class="sm:hidden">
 		<ButtonIcon>
 			<svg
-				class="w-10 h-10"
+				class="w-8 h-8"
 				xmlns="http://www.w3.org/2000/svg"
 				enable-background="new 0 0 24 24"
 				viewBox="0 0 24 24"
