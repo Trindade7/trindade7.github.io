@@ -1,22 +1,13 @@
-<script>
-	import Nav from '../components/Nav.svelte';
+<script lang="ts">
+	import Nav from "../components/Nav.svelte";
 
-	export let segment;
+	export let segment: string;
 </script>
 
-<style>
-	main {
-		position: relative;
-		max-width: 56em;
-		background-color: white;
-		padding: 2em;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-</style>
+<div class="app-conainer container mx-auto max-w-4xl h-screen">
+	<Nav {segment} />
 
-<Nav {segment}/>
-
-<main>
-	<slot></slot>
-</main>
+	<main class="pt-20">
+		<slot />
+	</main>
+</div>
