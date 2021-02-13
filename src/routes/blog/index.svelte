@@ -1,34 +1,43 @@
-<script context="module">
+<script context="module" lang="ts">
 	export function preload() {
-		return this.fetch(`blog.json`).then(r => r.json()).then(posts => {
-			return { posts };
-		});
+		return this.fetch(`blog.json`)
+			.then((r: { json: () => any }) => r.json())
+			.then((posts: { slug: string; title: string; html: any }[]) => {
+				return { posts };
+			});
 	}
 </script>
 
-<script>
-	export let posts;
+<script lang="ts">
+	export let posts: { slug: string; title: string; html: any }[];
 </script>
-
-<style>
-	ul {
-		margin: 0 0 1em 0;
-		line-height: 1.5;
-	}
-</style>
 
 <svelte:head>
 	<title>Blog</title>
 </svelte:head>
 
-<h1>Recent posts</h1>
+<div class="posts container p-4 pt-10">
+	<h4 class="font-bold text-corporateDark-primary py-7">Recent posts</h4>
 
-<ul>
-	{#each posts as post}
-		<!-- we're using the non-standard `rel=prefetch` attribute to
+	<ul>
+		{#each posts as post}
+			<!-- we're using the non-standard `rel=prefetch` attribute to
 				tell Sapper to load the data for the page as soon as
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
-		<li><a rel="prefetch" href="blog/{post.slug}">{post.title}</a></li>
-	{/each}
-</ul>
+			<li>
+				<a
+					class="text-4xl font-bold font-serif"
+					rel="prefetch"
+					href="blog/{post.slug}">{post.title}</a
+				>
+				<p class="text-lg py-2">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+					repudiandae eum vero officiis ipsa odio praesentium optio maxime
+					voluptates. Tempore eius nemo architecto pariatur numquam accusamus
+					voluptate debitis nesciunt dolores!
+				</p>
+			</li>
+		{/each}
+	</ul>
+</div>
