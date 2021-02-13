@@ -1,12 +1,11 @@
 {
 	"background_color": "#ffffff",
 	"theme_color": "#333333",
-	"name": "TODO",
-	"short_name": "TODO",
+	"name": "José Trindade",
+	"short_name": "Trindade",
 	"display": "minimal-ui",
 	"start_url": "/",
-	"icons": [
-		{
+	"icons": [{
 			"src": "logo-192.png",
 			"sizes": "192x192",
 			"type": "image/png"
@@ -15,11 +14,6 @@
 			"src": "logo-512.png",
 			"sizes": "512x512",
 			"type": "image/png"
-		} ,
-		{
-			"src": "icons/palette-24px.svg",
-			"sizes": "24x24",
-			"type": "svg"
 		}
 	]
 }
