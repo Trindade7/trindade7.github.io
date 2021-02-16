@@ -4,14 +4,30 @@
 	export function preload() {
 		return this.fetch(`blog.json`)
 			.then((r: { json: () => any }) => r.json())
-			.then((posts: { slug: string; title: string; html: any }[]) => {
-				return { posts };
-			});
+			.then(
+				(
+					posts: {
+						slug: string;
+						title: string;
+						lead: string;
+						pubDate: string;
+						html: any;
+					}[]
+				) => {
+					return { posts };
+				}
+			);
 	}
 </script>
 
 <script lang="ts">
-	export let posts: { slug: string; title: string; html: any }[];
+	export let posts: {
+		slug: string;
+		title: string;
+		lead: string;
+		pubDate: string;
+		html: any;
+	}[];
 </script>
 
 <svelte:head>
@@ -37,10 +53,7 @@
 						href="blog/{post.slug}">{post.title}</a
 					>
 					<p class="py-2">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-						repudiandae eum vero officiis ipsa odio praesentium optio maxime
-						voluptates. Tempore eius nemo architecto pariatur numquam accusamus
-						voluptate debitis nesciunt dolores!
+						{post.lead}
 					</p>
 				</li>
 			{/each}

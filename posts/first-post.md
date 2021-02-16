@@ -1,7 +1,9 @@
 ---
 title: "My first blog post"
-lead: "Culpa irure velit adipisicing in anim occaecat dolore adipisicing quis. Eiusmod ipsum in deserunt Lorem esse magna cillum sint ut quis commodo culpa esse. Id mollit et minim officia aliqua nulla in excepteur aute officia aute."
+lead: "The lead has to be attention grabing and enticing adipisicing quis. Eiusmod ipsum in deserunt Lorem esse magna cillum sint ut quis commodo culpa esse. Id mollit et minim officia aliqua nulla in excepteur aute officia aute."
 slug: "first-post"
+author: "José Trindade"
+pubDate: "2021-02-16"
 ---
 
 The slug is what's used to navigate/link to this specific post, visible right now in the URL.
