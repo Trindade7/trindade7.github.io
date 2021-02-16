@@ -1,5 +1,5 @@
 <script lang="ts">
-  import ButtonIcon from "./ButtonIcon.svelte";
+  import ButtonIconLink from "./ButtonIconLink.svelte";
 
   export let segment: string;
 </script>
@@ -23,7 +23,7 @@ sm:hidden
 "
 >
   <span class="flex-auto" />
-  <ButtonIcon>
+  <ButtonIconLink>
     <a
       class="text-corporateDark-light fill-current"
       rel="prefetch"
@@ -46,9 +46,9 @@ sm:hidden
         ></svg
       ></a
     >
-  </ButtonIcon>
+  </ButtonIconLink>
 
-  <ButtonIcon>
+  <ButtonIconLink>
     <span class="px-2">MORE COMING</span>
     <!--TODO: CREATE
      <a
@@ -75,9 +75,9 @@ sm:hidden
         </g>
       </svg>
     </a> -->
-  </ButtonIcon>
+  </ButtonIconLink>
 
-  <ButtonIcon>
+  <ButtonIconLink>
     <a
       class="text-corporateDark-light fill-current"
       rel="prefetch"
@@ -98,6 +98,6 @@ sm:hidden
         ></svg
       >
     </a>
-  </ButtonIcon>
+  </ButtonIconLink>
   <span class="flex-auto" />
 </nav>
