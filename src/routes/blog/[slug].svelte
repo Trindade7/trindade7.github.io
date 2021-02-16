@@ -16,7 +16,7 @@
 </script>
 
 <script lang="ts">
-	export let post: { slug: string; title: string; html: any };
+	export let post: { slug: string; title: string; lead: string; html: any };
 </script>
 
 <svelte:head>
@@ -29,6 +29,22 @@
 		{post.title}
 	</h1>
 	<PageTransitionWrapper>
+		<div class="flex flex-col md:flex-row py-4">
+			<span
+				class="
+			text-corporateDark-primary
+			border-t-4 md:border-t-0 md:border-l-4
+			pt-2 md:pt-0 md:pl-6 "
+			/>
+
+			<p
+				role="doc-abstract"
+				class="lead text-2xl leading-9 md:text-3xl md:leading-10 font-light"
+			>
+				{post.lead}
+			</p>
+		</div>
+
 		<div class="content text-lg  py-4  prose  max-w-none dark:prose-dark">
 			{@html post.html}
 		</div>

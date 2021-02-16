@@ -8,7 +8,7 @@
 <div class="app-conainer container mx-auto max-w-4xl h-screen">
 	<Nav {segment} />
 
-	<main class="md:pt-20">
+	<main>
 		<slot />
 	</main>
 
