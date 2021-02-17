@@ -1,4 +1,9 @@
+<script lang="ts">
+	export let ariaLabel: string;
+</script>
+
 <button
+	aria-label={ariaLabel}
 	class="btn rounded-full text-white p-2 ml-4 outline-none focus:border-primary
 	 flex justify-items-center items-center
 		transition duration-200 ease-in-out

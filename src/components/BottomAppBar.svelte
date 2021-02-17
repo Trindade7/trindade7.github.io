@@ -27,6 +27,7 @@ sm:hidden
     <a
       class="text-corporateDark-light fill-current"
       rel="prefetch"
+      aria-label="about"
       aria-current={segment === "about" ? "page" : undefined}
       href="about"
     >
@@ -81,6 +82,7 @@ sm:hidden
     <a
       class="text-corporateDark-light fill-current"
       rel="prefetch"
+      aria-label="blog"
       aria-current={segment === "blog" ? "page" : undefined}
       href="blog"
     >
