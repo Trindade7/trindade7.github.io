@@ -837,6 +837,8 @@ video {
 .prose p {
   margin-top: 1.25em;
   margin-bottom: 1.25em;
+  line-height: 1.8rem;
+  letter-spacing: 0.02rem;
 }
 
 .prose img {
@@ -2128,6 +2130,8 @@ video {
 .dark .dark\:prose p {
   margin-top: 1.25em;
   margin-bottom: 1.25em;
+  line-height: 1.8rem;
+  letter-spacing: 0.02rem;
 }
 
 .dark .dark\:prose img {
@@ -10721,7 +10725,7 @@ video {
 }
 
 .font-serif {
-  font-family: Rokkitt, serif;
+  font-family: Noto Serif, serif;
 }
 
 .font-thin {
@@ -34258,7 +34262,7 @@ video {
   }
 
   .sm\:font-serif {
-    font-family: Rokkitt, serif;
+    font-family: Noto Serif, serif;
   }
 
   .sm\:font-thin {
@@ -57752,7 +57756,7 @@ video {
   }
 
   .md\:font-serif {
-    font-family: Rokkitt, serif;
+    font-family: Noto Serif, serif;
   }
 
   .md\:font-thin {
@@ -81246,7 +81250,7 @@ video {
   }
 
   .lg\:font-serif {
-    font-family: Rokkitt, serif;
+    font-family: Noto Serif, serif;
   }
 
   .lg\:font-thin {
@@ -104740,7 +104744,7 @@ video {
   }
 
   .xl\:font-serif {
-    font-family: Rokkitt, serif;
+    font-family: Noto Serif, serif;
   }
 
   .xl\:font-thin {
@@ -128234,7 +128238,7 @@ video {
   }
 
   .\32xl\:font-serif {
-    font-family: Rokkitt, serif;
+    font-family: Noto Serif, serif;
   }
 
   .\32xl\:font-thin {
