@@ -31,6 +31,10 @@
 </script>
 
 <svelte:head>
+	<meta
+		name="Description"
+		content="Posts about Software development, mostly Web, and mental health"
+	/>
 	<title>Blog</title>
 </svelte:head>
 

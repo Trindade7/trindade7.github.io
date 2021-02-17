@@ -4,7 +4,11 @@
 </script>
 
 <svelte:head>
-	<title>José Tridade - Developer</title>
+	<title>José Tridade - Web Developer</title>
+	<meta
+		name="description"
+		content="José Tridade is a Developer with focus in Web and Cross Platform apps. Plus a sprincle of design, drawing and painting currently based in Luanda, Angola"
+	/>
 </svelte:head>
 
 <PageTransitionWrapper>
@@ -33,6 +37,7 @@
 					<a
 						aria-label="Github @Trindade7"
 						target="_blank"
+						rel="noopener"
 						class="link p-1 hover:text-corporateDark-primary transition-colors"
 						href="https://github.com/Trindade7"
 						data-tippy-content="@Trindade7"
@@ -49,6 +54,7 @@
 					<a
 						aria-label="Twitter @Trindade7Jose"
 						target="_blank"
+						rel="noopener"
 						class="link p-1 hover:text-corporateDark-primary transition-colors"
 						href="https://twitter.com/Trindade7Jose"
 						data-tippy-content="@Trindade7Jose"

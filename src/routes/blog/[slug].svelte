@@ -13,6 +13,9 @@
 			this.error(res.status, data.message);
 		}
 	}
+	// <meta name="Description" content="Author: A.N. Author,
+	//   Illustrator: P. Picture, Category: Books, Price: $17.99,
+	//   Length: 784 pages"
 </script>
 
 <script lang="ts">
@@ -27,6 +30,11 @@
 </script>
 
 <svelte:head>
+	<meta
+		name="Description"
+		content={`${post.lead}, Author: ${post.author}, Category: Post`}
+	/>
+	<meta name="author" content={post.author} />
 	<title>{post.title}</title>
 </svelte:head>
 
@@ -59,9 +67,8 @@
 				<address class="author p-4">
 					<a
 						class="underline text-corporateDark-primary px-2 py-1"
-						target="_blank"
 						rel="author"
-						href="/author/john-doe">{post.author}</a
+						href="https://trindade7.github.io/">{post.author}</a
 					>
 				</address>
 
@@ -79,7 +86,7 @@
 		<div class="web-mentions prose dark:prose-dark py-8">
 			<h3 class="p-4 text-2xl font-serif">WEBMENTIONS</h3>
 
-			<h1 class="text-center  font-serif text-4xl">COMMING SOON</h1>
+			<h1 class="text-center text-4xl">COMMING SOON</h1>
 		</div>
 	</PageTransitionWrapper>
 </article>

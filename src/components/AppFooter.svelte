@@ -16,6 +16,7 @@
   <div class="flex flex-row gap-4 items-center">
     <a
       target="_blank"
+      rel="noopener"
       aria-label="Github @Trindade7Jose"
       class="link p-1 hover:text-corporateDark-primary transition-colors"
       href="https://github.com/Trindade7"
@@ -32,6 +33,7 @@
     >
     <a
       target="_blank"
+      rel="noopener"
       aria-label="Twitter @Trindade7Jose"
       class="link p-1  hover:text-corporateDark-primary transition-colors"
       href="https://twitter.com/Trindade7Jose"
