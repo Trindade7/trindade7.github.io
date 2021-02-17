@@ -12,12 +12,20 @@ container
 mx-auto
 max-w-4xl
 p-4 flex">
-	<a aria-current={segment === undefined ? "page" : undefined} href=".">
+	<!-- <a aria-current={segment === undefined ? "page" : undefined} href=".">
 		<img class="h-12 w-12" src={logo} alt="T7" />
-	</a>
+	</a> -->
 	<div class="flex items-center ">
-		<a aria-current={segment === undefined ? "page" : undefined} href=".">
-			<h1 class="font-bold pl-4">Trindade</h1>
+		<a
+			class="font-serif italic  text-xl font-bold"
+			aria-current={segment === undefined ? "page" : undefined}
+			href="."
+		>
+			<span class="text-5xl text-corporateDark-primary">T</span>
+			<span
+				class="pt-2 -ml-1 hover:text-corporateDark-primary transition-colors"
+				>rindade</span
+			>
 		</a>
 	</div>
 
