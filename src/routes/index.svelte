@@ -1,5 +1,6 @@
 <script>
 	import PageTransitionWrapper from "../components/PageTransitionWrapper.svelte";
+	import ProjectCard from "../components/ProjectCard.svelte";
 	import WebDevAnimationConsole from "../components/web-animation/WebDevAnimationConsole.svelte";
 </script>
 
@@ -14,7 +15,7 @@
 <PageTransitionWrapper>
 	<div class="container flex flex-col mx-auto px-4 pt-9 md:pt-16">
 		<div class="intro flex flex-col sm:flex-row">
-			<div class="pb-4 sm:pr-4 ">
+			<div class="pb-4 sm:pr-11">
 				<WebDevAnimationConsole />
 			</div>
 
@@ -71,6 +72,34 @@
 				</div>
 			</div>
 		</div>
+
+		<section id="projects" class="projects-container py-16">
+			<header class="flex flex-row py-4">
+				<h3 class="text-2xl font-bold ">Projects</h3>
+				<span class="flex-auto" />
+				<!-- <a href="#projects" class="flex flex-row"> -->
+				<a href="#projects">
+					<strong class="inline">View all </strong>
+					<svg
+						class="w-6 inline -mt-1"
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M14 5l7 7m0 0l-7 7m7-7H3"
+						/>
+					</svg>
+				</a>
+			</header>
+			<div class="projects py-8 flex flex-row flex-wrap">
+				<ProjectCard />
+			</div>
+		</section>
 		<span class="flex-auto" />
 	</div>
 </PageTransitionWrapper>
