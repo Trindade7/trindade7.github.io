@@ -1,5 +1,6 @@
 ---
 title: "My first blog post"
+description: "The Description has to be attention grabing and enticing adipisicing quis. Eiusmod ipsum in deserunt Lorem esse magna cillum sint ut quis commodo culpa esse. Id mollit et minim officia aliqua nulla in excepteur aute officia aute."
 lead: "The lead has to be attention grabing and enticing adipisicing quis. Eiusmod ipsum in deserunt Lorem esse magna cillum sint ut quis commodo culpa esse. Id mollit et minim officia aliqua nulla in excepteur aute officia aute."
 slug: "first-post"
 author: "José Trindade"

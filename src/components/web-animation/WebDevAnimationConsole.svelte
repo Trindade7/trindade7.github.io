@@ -11,8 +11,11 @@
   }
 
   onMount(() => {
-    let a = setInterval(() => animateCursor(), 500);
-    greet();
+    setInterval(() => animateCursor(), 500);
+
+    setTimeout(() => {
+      greet();
+    }, 1500);
   });
 
   $: greeting = "";
@@ -20,15 +23,13 @@
   const intro = "Hi there, I'm José :)";
 
   function greet(): void {
-    let e = 0;
-
     for (let i = 0; i < intro.length; i++) {
       if (i <= 9) {
         setTimeout(() => (greeting += intro[i]), i * 200);
       } else {
         setTimeout(() => {
           name += intro[i];
-          greetingAndNameSpaceFix = true; //TODO: better way worth it?
+          greetingAndNameSpaceFix = true; //TODO: better way worth the time?
         }, (i + 5) * 200);
       }
     }

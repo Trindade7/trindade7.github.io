@@ -1,7 +1,40 @@
-<script>
+<script type="ts">
+	import ButtonLinkArrow from "../components/ButtonLinkArrow.svelte";
 	import PageTransitionWrapper from "../components/PageTransitionWrapper.svelte";
 	import ProjectCard from "../components/ProjectCard.svelte";
 	import WebDevAnimationConsole from "../components/web-animation/WebDevAnimationConsole.svelte";
+	import type { Project } from "../models/AppModels.svelte";
+
+	let projects: Project[] = [
+		{
+			name: "Project name here",
+			description:
+				"Aute eu duis ut eu ipsum officia eiusmod elit ad anim incididunt aute et. Culpa amet velit in culpa amet pariatur non non sit. Tempor ex cillum culpa occaecat id. Ad fugiat do laboris Lorem et elit. Velit do magna aliquip cupidatat aliqua ut anim magna et aute esse Lorem. Consequat quis duis elit velit elit in ullamco qui. Qui officia adipisicing reprehenderit cupidatat reprehenderit Lorem non irure cupidatat occaecat proident.",
+			mainTool: "python",
+			tools: ["ts", "firebase", "other"],
+		},
+		{
+			name: "Hello world",
+			description:
+				"Laborum aliquip est Lorem reprehenderit anim adipisicing. Non elit reprehenderit id labore labore eu aute. Ut reprehenderit excepteur anim id commodo consequat. Ad nostrud esse deserunt qui labore ipsum incididunt laboris.",
+			mainTool: "nodejs",
+			tools: ["css", "firebase"],
+		},
+		{
+			name: "Our Space",
+			description:
+				"Adipisicing cupidatat aliquip nulla ut anim laboris labore aliqua adipisicing elit.",
+			mainTool: "angular",
+			tools: ["sass", "firebase"],
+		},
+		{
+			name: "Kuimba",
+			description:
+				"Reprehenderit sunt excepteur id aliqua sint ad occaecat nisi ut id consequat labore qui. Amet dolore consequat fugiat ex consequat ullamco exercitation Lorem enim proident laboris. Dolor laboris dolor culpa magna elit ut veniam consectetur. Irure voluptate aute aliqua quis excepteur.",
+			mainTool: "angular",
+			tools: ["sass", "firebase", "wasm", "rust"],
+		},
+	];
 </script>
 
 <svelte:head>
@@ -14,14 +47,14 @@
 
 <PageTransitionWrapper>
 	<div class="container flex flex-col mx-auto px-4 pt-9 md:pt-16">
-		<div class="intro flex flex-col sm:flex-row">
+		<div class="intro flex flex-col sm:flex-row pb-20">
 			<div class="pb-4 sm:pr-11">
 				<WebDevAnimationConsole />
 			</div>
 
 			<div class="info md:pt-0">
 				<h1
-					class="text-5xl sm:text-7xl leading-tight space-y-1 pb-4 font-serif font-black"
+					class="text-5xl md:text-7xl leading-tight space-y-1 pb-4 font-serif font-black"
 				>
 					Striving for
 					<span class="text-corporateDark-primary"> awesome web apps </span>
@@ -32,9 +65,7 @@
 					Plus a sprincle of design, drawing and painting.
 				</p>
 
-				<div
-					class="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full flex flex-row gap-4 items-center"
-				>
+				<div class="mt-6 w-4/5 lg:w-full flex flex-row gap-4 items-center">
 					<a
 						aria-label="Github @Trindade7"
 						target="_blank"
@@ -73,13 +104,26 @@
 			</div>
 		</div>
 
-		<section id="projects" class="projects-container py-16">
+		<hr class=" text-gray" />
+
+		<section id="projects" class="projects-container pb-16">
 			<header class="flex flex-row py-4">
 				<h3 class="text-2xl font-bold ">Projects</h3>
 				<span class="flex-auto" />
 				<!-- <a href="#projects" class="flex flex-row"> -->
+				<ButtonLinkArrow>View all</ButtonLinkArrow>
+			</header>
+			<div class="projects py-8 flex flex-row flex-wrap gap-4">
+				{#each projects as project}
+					<div style="flex: 1 1 320px" class="project-card-container w-full ">
+						<ProjectCard {...project} />
+					</div>
+				{/each}
+			</div>
+			<div class="py-4 flex flex-row">
+				<span class="flex-auto" />
 				<a href="#projects">
-					<strong class="inline">View all </strong>
+					<strong class="inline">All projects</strong>
 					<svg
 						class="w-6 inline -mt-1"
 						xmlns="http://www.w3.org/2000/svg"
@@ -95,11 +139,7 @@
 						/>
 					</svg>
 				</a>
-			</header>
-			<div class="projects py-8 flex flex-row flex-wrap">
-				<ProjectCard />
 			</div>
 		</section>
-		<span class="flex-auto" />
 	</div>
 </PageTransitionWrapper>

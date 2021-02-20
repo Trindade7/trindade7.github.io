@@ -36,13 +36,30 @@ module.exports = {
         light: '#FF9F1C',
         lightest: '#FDFFFC',
       },
-      corporateDark: {
+      corporateDarkDefault: {
         darkest: '#050401',
         dark: '#303036',
         primary: '#FC5130',
         accent: '#30BCED',
         light: '#FFFAFF',
         lightest: '#FFFFFF',
+      },
+      corporateDark: {
+        darkest: '#040105',
+        dark: '#2c2c40',
+        primary: '#FC5130',
+        accent: '#30BCED',
+        light: '#FFFAFF',
+        lightest: '#FFFFFF',
+      },
+      tools: {
+        typescript: '#007ACC',
+        javascript: '#F7DF1E',
+        python: '#387EB8',
+        angular: '#c40030',
+        svelte: '#FF3E00',
+        nodejs: '#6cbd4a',
+        sapper: '#159497',
       },
     },
     extend: {
