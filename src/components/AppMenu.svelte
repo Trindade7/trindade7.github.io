@@ -6,7 +6,10 @@
 
   $: active = false;
   function toggle() {
-    active = !active;
+    setTimeout(() => {
+      // #2 TimeOut transition minimize flicker
+      active = !active;
+    }, 110);
   }
 </script>
 
