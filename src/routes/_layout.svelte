@@ -2,12 +2,19 @@
 	import Nav from "../components/Nav.svelte";
 	import BottomAppBar from "../components/BottomAppBar.svelte";
 	import AppFooter from "../components/AppFooter.svelte";
+	import AppMenu from "../components/AppMenu.svelte";
 
 	export let segment: string;
 </script>
 
-<div class="app-conainer container flex flex-col mx-auto max-w-4xl h-screen">
+<div
+	class="app-conainer container relative flex flex-col mx-auto max-w-4xl h-screen"
+>
 	<Nav {segment} />
+
+	<div class="sm:hidden">
+		<AppMenu {segment} />
+	</div>
 
 	<main>
 		<slot />
@@ -15,5 +22,4 @@
 
 	<span class="flex-auto" />
 	<AppFooter />
-	<BottomAppBar {segment} />
 </div>

@@ -9,7 +9,7 @@
 </script>
 
 {#if show}
-  <div in:fly={{ y: -10, duration: 400 }} class="page relative">
+  <div in:fly={{ y: -10, duration: 400, delay: 150 }} class="page relative">
     <slot />
   </div>
 {/if}
