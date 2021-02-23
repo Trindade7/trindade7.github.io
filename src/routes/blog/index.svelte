@@ -42,16 +42,16 @@
 </svelte:head>
 
 <PageTransitionWrapper>
-	<div class="posts container p-4 pb-32">
+	<div class="posts container p-4 pb-32 m-auto">
 		<h3 class="font-serif font-bold text-4xl uppercase py-10">My posts</h3>
 
-		<ul>
+		<ul class="sm:flex sm:flex-row sm:flex-wrap sm:gap-6">
 			{#each posts as post, index}
 				<!-- we're using the non-standard `rel=prefetch` attribute to
 					tell Sapper to load the data for the page as soon as
 					the user hovers over the link or taps it, instead of
 					waiting for the 'click' event -->
-				<li class="py-4 ">
+				<li class="py-4 flex-1">
 					<BlogPostCard {...post} />
 				</li>
 				{#if index !== posts.length - 1}

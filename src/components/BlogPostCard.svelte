@@ -8,7 +8,7 @@
 
   export let tags: string[] = [];
 
-  let mainTool = tags.shift();
+  let mainTool = tags[0];
 
   let colorClass = "";
   let borderColorClass = "";
@@ -19,8 +19,10 @@
   });
 </script>
 
-<div class="project-card py-4 w-full   flex flex-col">
-  <div class="flex flex-row">
+<!-- TODO: ADD POST IMAGE -->
+
+<div class="project-card py-4 w-full h-full flex flex-col">
+  <div class="flex flex-row pb-4">
     <small class="{colorClass} font-bold uppercase border-t-2 max-w-max">
       {mainTool}
     </small>
@@ -29,15 +31,21 @@
   </div>
 
   <a href={"blog/" + slug}>
-    <h3 class="text-2xl font-serif font-bold py-4">{title}</h3>
+    <h3
+      class="text-2xl font-serif font-bold hover:text-corporateDark-primary hover:underline focus:text-corporateDark-primary focus:underline transition-colors"
+    >
+      {title}
+    </h3>
   </a>
 
-  <p class="description">
+  <p class="description py-4">
     {lead}
   </p>
 
-  <div class="tags pt-4 opacity-70 flex flex-row flex-wrap gap-2 max-w-full">
-    {#each tags as tag}
+  <span class="flex-auto" />
+
+  <div class="tags opacity-70 flex flex-row flex-wrap gap-2 max-w-full">
+    {#each tags.slice(1) as tag}
       <small class="uppercase font-bold">#{tag}</small>
     {/each}
   </div>

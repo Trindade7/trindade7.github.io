@@ -19,14 +19,20 @@
 </script>
 
 <script lang="ts">
+	import { onMount } from "svelte";
+
 	export let post: {
 		slug: string;
 		title: string;
 		lead: string;
 		html: any;
 		author: string;
+		tags: string[];
 		pubDate: string;
 	};
+
+	let colorClass = "";
+	onMount(() => (colorClass = colorClass = "text-tools-" + post.tags[0]));
 </script>
 
 <svelte:head>
@@ -39,10 +45,18 @@
 </svelte:head>
 
 <article class="container  max-w-4xl p-4 md:px-20 pt-10">
-	<h4 class="uppercase  text-corporateDark-primary">experience</h4>
+	<div class="flex flex-row pt-8 pb-4">
+		<small class="{colorClass} font-bold uppercase border-t-2 max-w-max">
+			{post.tags[0]}
+		</small>
+		<span class="flex-auto" />
+		<small class="opacity-70">{post.pubDate}</small>
+	</div>
+
 	<h1 class="text-5xl font-bold font-serif py-4" rel="prefetch">
 		{post.title}
 	</h1>
+
 	<PageTransitionWrapper>
 		<div class="flex flex-col md:flex-row py-4">
 			<span
@@ -66,16 +80,16 @@
 			<div class="flex flex-row justify-between">
 				<address class="author p-4">
 					<a
-						class="underline text-corporateDark-primary px-2 py-1"
+						class="underline hover:text-corporateDark-primary px-2 py-1"
 						rel="author"
-						href="https://trindade7.github.io/">{post.author}</a
+						href=".">{post.author}</a
 					>
 				</address>
 
 				<a
-					class=" text-2xl font-bold font-serif p-4 transition-colors text-corporateDark-primary hover:text-corporateDark-light"
+					class="font-bold p-4 transition-colors text-corporateDark-primary hover:text-corporateDark-light"
 					rel="prefetch"
-					href="blog">MORE POSTS</a
+					href="blog">more posts</a
 				>
 
 				<time class="p-4" datetime={post.pubDate}>{post.pubDate}</time>

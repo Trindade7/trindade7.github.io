@@ -35,13 +35,19 @@ p-4 flex">
 		<li
 			class="px-2 flex items-center   hover:text-corporateDark-primary transition-colors"
 		>
-			<a aria-current={segment === undefined ? "page" : undefined} href="."
-				>home</a
+			<a aria-current={segment === "about" ? "page" : undefined} href="about"
+				>about</a
 			>
 		</li>
-
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
+		<li
+			class="px-2 flex items-center   hover:text-corporateDark-primary transition-colors"
+		>
+			<a
+				rel="prefetch"
+				aria-current={segment === "projects" ? "page" : undefined}
+				href="projects">projects</a
+			>
+		</li>
 		<li
 			class="px-2 flex items-center   hover:text-corporateDark-primary transition-colors"
 		>
@@ -51,12 +57,11 @@ p-4 flex">
 				href="blog">blog</a
 			>
 		</li>
-
 		<li
 			class="px-2 flex items-center   hover:text-corporateDark-primary transition-colors"
 		>
-			<a aria-current={segment === "about" ? "page" : undefined} href="about"
-				>about</a
+			<a aria-current={segment === undefined ? "page" : undefined} href="."
+				>home</a
 			>
 		</li>
 	</ul>
