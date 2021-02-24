@@ -21,47 +21,60 @@ p-4 flex">
 			aria-current={segment === undefined ? "page" : undefined}
 			href="."
 		>
-			<span class="text-5xl text-corporateDark-primary">T</span>
+			<!-- <span class="text-5xl text-corporateDark-primary">T</span> -->
+			<img class="w-12 inline -mt-4" src={logo} alt="T7" />
 			<span
-				class="pt-2 -ml-1 hover:text-corporateDark-primary transition-colors"
-				>rindade</span
+				class="pl-4  -ml-1 hover:text-corporateDark-primary transition-colors"
+				>trindade</span
 			>
 		</a>
 	</div>
 
 	<span class="flex-auto" />
 
-	<ul class="hidden sm:flex flex-row uppercase">
-		<li
-			class="px-2 flex items-center   hover:text-corporateDark-primary transition-colors"
-		>
-			<a aria-current={segment === "about" ? "page" : undefined} href="about"
-				>about</a
-			>
-		</li>
-		<li
-			class="px-2 flex items-center   hover:text-corporateDark-primary transition-colors"
-		>
+	<ul class="hidden sm:flex flex-row-reverse uppercase">
+		<li>
 			<a
+				aria-current={segment === "about" ? "page" : undefined}
+				href="about"
+				class="px-2 flex items-center   hover:text-corporateDark-primary focus:text-corporateDark-primary {segment ===
+				'about'
+					? 'text-corporateDark-primary'
+					: ''} transition-colors"
+			>
+				about
+			</a>
+		</li>
+		<li>
+			<a
+				class="px-2 flex items-center   hover:text-corporateDark-primary focus:text-corporateDark-primary {segment ===
+				'projects'
+					? 'text-corporateDark-primary'
+					: ''} transition-colors"
 				rel="prefetch"
 				aria-current={segment === "projects" ? "page" : undefined}
 				href="projects">projects</a
 			>
 		</li>
-		<li
-			class="px-2 flex items-center   hover:text-corporateDark-primary transition-colors"
-		>
+		<li>
 			<a
+				class="px-2 flex items-center   hover:text-corporateDark-primary focus:text-corporateDark-primary {segment ===
+				'blog'
+					? 'text-corporateDark-primary'
+					: ''} transition-colors trasitio"
 				rel="prefetch"
 				aria-current={segment === "blog" ? "page" : undefined}
 				href="blog">blog</a
 			>
 		</li>
-		<li
-			class="px-2 flex items-center   hover:text-corporateDark-primary transition-colors"
-		>
-			<a aria-current={segment === undefined ? "page" : undefined} href="."
-				>home</a
+		<li>
+			<a
+				class="px-2 flex items-center   hover:text-corporateDark-primary focus:text-corporateDark-primary {segment ===
+				undefined
+					? 'text-corporateDark-primary'
+					: ''} transition-colors"
+				aria-current={segment === undefined ? "page" : undefined}
+				href=".">home</a
 			>
 		</li>
 	</ul>

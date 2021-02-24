@@ -1,5 +1,6 @@
 <script type="ts">
   import { onMount } from "svelte";
+  import TagList from "./TagList.svelte";
 
   export let name = "Project name here";
   export let description = `Cillum esse sint ea sunt labore quis dolore dolor mollit minim. Commodo
@@ -32,17 +33,20 @@
     {mainTool}
   </small>
 
-  <h3 class="text-xl font-bold py-4">{name}</h3>
+  <h3 class="text-xl font-bold py-4">
+    <a
+      class="hover:underline hover:{colorClass} transition-colors"
+      href="projects/id">{name}</a
+    >
+  </h3>
 
-  <p class="description">
+  <p class="description line-clamp-4">
     {description}
   </p>
 
   <span class="flex-auto" />
 
-  <div class="tags pt-4 opacity-70 flex flex-row flex-wrap gap-2 max-w-full">
-    {#each tools as tool}
-      <small class="uppercase font-bold">#{tool}</small>
-    {/each}
+  <div class="tags pt-4">
+    <TagList tags={tools} />
   </div>
 </div>

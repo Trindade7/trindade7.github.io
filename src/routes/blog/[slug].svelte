@@ -1,6 +1,10 @@
 <script context="module" lang="ts">
 	import PageTransitionWrapper from "../../components/PageTransitionWrapper.svelte";
 
+	import ButtonLinkArrow from "../../components/ButtonLinkArrow.svelte";
+
+	import TagList from "../../components/TagList.svelte";
+
 	export async function preload({ params }) {
 		// the `slug` parameter is available because
 		// this file is called [slug].svelte
@@ -13,9 +17,6 @@
 			this.error(res.status, data.message);
 		}
 	}
-	// <meta name="Description" content="Author: A.N. Author,
-	//   Illustrator: P. Picture, Category: Books, Price: $17.99,
-	//   Length: 784 pages"
 </script>
 
 <script lang="ts">
@@ -75,26 +76,24 @@
 			{@html post.html}
 		</div>
 
-		<div class="py-4">
-			<hr />
-			<div class="flex flex-row justify-between">
-				<address class="author p-4">
-					<a
-						class="underline hover:text-corporateDark-primary px-2 py-1"
-						rel="author"
-						href=".">{post.author}</a
-					>
-				</address>
+		<div class="tags max-w-2xl m-auto py-4">
+			<TagList tags={post.tags} />
 
-				<a
-					class="font-bold p-4 transition-colors text-corporateDark-primary hover:text-corporateDark-light"
-					rel="prefetch"
-					href="blog">more posts</a
-				>
+			<div class="py-4">
+				<hr />
+				<div class="pt-4 flex flex-row justify-between">
+					<address class="author">
+						<time class="block" datetime={post.pubDate}>{post.pubDate}</time>
+						<a
+							class="underline hover:text-corporateDark-primary"
+							rel="author"
+							href=".">{post.author}</a
+						>
+					</address>
 
-				<time class="p-4" datetime={post.pubDate}>{post.pubDate}</time>
+					<ButtonLinkArrow url="blog">All posts</ButtonLinkArrow>
+				</div>
 			</div>
-			<hr />
 		</div>
 
 		<div class="web-mentions prose dark:prose-dark py-8">

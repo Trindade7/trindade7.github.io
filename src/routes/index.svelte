@@ -3,7 +3,7 @@
 	import PageTransitionWrapper from "../components/PageTransitionWrapper.svelte";
 	import ProjectCard from "../components/ProjectCard.svelte";
 	import WebDevAnimationConsole from "../components/web-animation/WebDevAnimationConsole.svelte";
-	import type { Project } from "../models/AppModels.svelte";
+	import type { Project } from "../models/DataModels.svelte";
 
 	let projects: Project[] = [
 		{
@@ -56,8 +56,8 @@
 				<h1
 					class="text-5xl md:text-7xl leading-tight space-y-1 pb-4 font-serif font-black"
 				>
-					Striving for
-					<span class="text-corporateDark-primary"> awesome web apps </span>
+					Striving for awesome
+					<span class="text-corporateDark-primary"> web apps</span>
 				</h1>
 
 				<p class="py-4 text-xl">
@@ -110,7 +110,6 @@
 			<header class="flex flex-row py-4">
 				<h3 class="text-2xl font-bold ">Projects</h3>
 				<span class="flex-auto" />
-				<!-- <a href="#projects" class="flex flex-row"> -->
 				<ButtonLinkArrow>View all</ButtonLinkArrow>
 			</header>
 			<div class="projects py-8 flex flex-row flex-wrap gap-4">
@@ -120,25 +119,10 @@
 					</div>
 				{/each}
 			</div>
-			<div class="py-4 flex flex-row">
+			<div class="pb-4 flex flex-row">
 				<span class="flex-auto" />
-				<a href="#projects">
-					<strong class="inline">All projects</strong>
-					<svg
-						class="w-6 inline -mt-1"
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M14 5l7 7m0 0l-7 7m7-7H3"
-						/>
-					</svg>
-				</a>
+
+				<ButtonLinkArrow>All Projects</ButtonLinkArrow>
 			</div>
 		</section>
 	</div>
