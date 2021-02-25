@@ -9,8 +9,6 @@
 app-nav
 bg-corporateDark-darkest
 container
-mx-auto
-max-w-4xl
 p-4 flex">
 	<!-- <a aria-current={segment === undefined ? "page" : undefined} href=".">
 		<img class="h-12 w-12" src={logo} alt="T7" />

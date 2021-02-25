@@ -46,9 +46,9 @@
 </svelte:head>
 
 <PageTransitionWrapper>
-	<div class="container flex flex-col mx-auto px-4 pt-9 md:pt-16">
+	<div class="flex flex-col mx-auto px-4 pt-9 md:pt-16">
 		<div class="intro flex flex-col sm:flex-row pb-20">
-			<div class="pb-4 sm:pr-11">
+			<div class="pb-4 sm:pr-8 md:pr-11">
 				<WebDevAnimationConsole />
 			</div>
 
@@ -114,7 +114,7 @@
 			</header>
 			<div class="projects py-8 flex flex-row flex-wrap gap-4">
 				{#each projects as project}
-					<div style="flex: 1 1 320px" class="project-card-container w-full ">
+					<div style="flex: 1 1 360px" class="project-card-container w-full ">
 						<ProjectCard {...project} />
 					</div>
 				{/each}

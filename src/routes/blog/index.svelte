@@ -42,7 +42,7 @@
 </svelte:head>
 
 <PageTransitionWrapper>
-	<div class="posts container p-4 pb-32 m-auto">
+	<div class="posts p-4 pb-32 m-auto">
 		<h3 class="font-serif font-bold text-4xl uppercase py-10">My posts</h3>
 
 		<ul class="sm:flex sm:flex-row sm:flex-wrap sm:gap-6">

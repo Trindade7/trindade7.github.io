@@ -45,7 +45,7 @@
 	<title>{post.title}</title>
 </svelte:head>
 
-<article class="container  max-w-4xl p-4 md:px-20 pt-10">
+<article class="mx-auto max-w-4xl p-4 md:px-20 pt-10">
 	<div class="flex flex-row pt-8 pb-4">
 		<small class="{colorClass} font-bold uppercase border-t-2 max-w-max">
 			{post.tags[0]}
@@ -59,7 +59,7 @@
 	</h1>
 
 	<PageTransitionWrapper>
-		<div class="flex flex-col md:flex-row py-4">
+		<div class=" flex flex-col md:flex-row py-4">
 			<span
 				class="
 			text-corporateDark-primary
@@ -94,12 +94,11 @@
 					<ButtonLinkArrow url="blog">All posts</ButtonLinkArrow>
 				</div>
 			</div>
+		</div>
+		<div class="web-mentions prose dark:prose-dark py-10">
+			<h3 class=" text-2xl">WEBMENTIONS</h3>
 
-			<div class="web-mentions prose dark:prose-dark py-8">
-				<h3 class=" text-2xl">WEBMENTIONS</h3>
-
-				<h1 class="text-center text-4xl">COMMING SOON</h1>
-			</div>
+			<h1 class="text-center text-4xl">COMMING SOON</h1>
 		</div>
 	</PageTransitionWrapper>
 </article>

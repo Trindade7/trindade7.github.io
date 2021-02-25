@@ -7,19 +7,24 @@
 	export let segment: string;
 </script>
 
-<div
-	class="app-conainer container relative flex flex-col mx-auto max-w-4xl h-screen"
->
-	<Nav {segment} />
+<div class="app-conainer relative flex flex-col h-screen">
+	<div class="container flex flex-col w-full max-w-5xl mx-auto ">
+		<Nav {segment} />
+	</div>
 
 	<div class="sm:hidden">
 		<AppMenu {segment} />
 	</div>
 
-	<main>
+	<main class="flex flex-col w-full max-w-5xl mx-auto  ">
 		<slot />
 	</main>
 
 	<span class="flex-auto" />
-	<AppFooter />
+
+	<div class=" border-t border-corporateDark-dark">
+		<div class="w-full max-w-5xl mx-auto ">
+			<AppFooter />
+		</div>
+	</div>
 </div>

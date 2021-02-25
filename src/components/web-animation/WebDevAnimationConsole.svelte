@@ -1,18 +1,17 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
-  let cursor = true;
-  let greetingAndNameSpaceFix = false;
+  let cursor = false;
+  let cursorIntervalHandle = 0;
 
   function animateCursor() {
     cursor = !cursor;
   }
 
   onMount(() => {
-    setInterval(() => animateCursor(), 500);
-
+    cursorIntervalHandle = setInterval(() => animateCursor(), 300);
     setTimeout(() => {
-      greet();
+      greet2(100);
     }, 1500);
   });
 
@@ -20,40 +19,65 @@
   $: name = "";
   const intro = "Hi there, I'm José :)";
 
-  function greet(): void {
-    for (let i = 0; i < intro.length; i++) {
-      if (i <= 9) {
-        setTimeout(() => (greeting += intro[i]), i * 200);
-      } else {
-        setTimeout(() => {
-          name += intro[i];
-          greetingAndNameSpaceFix = true; //TODO: better way worth the time?
-        }, (i + 5) * 200);
-      }
+  function restart() {
+    name = "";
+    greeting = "";
+    charCount = 0;
+    setTimeout(() => greet2(charCount), 1000);
+  }
+
+  let charCount = 0;
+  function greet2(speed = 50): void {
+    if (charCount < 9) {
+      greeting += intro[charCount];
+      setTimeout(greet2, speed);
+    } else if (charCount === 9) {
+      greeting += intro[charCount];
+      setTimeout(() => greet2(), 1500);
+    } else if (charCount < intro.length) {
+      name += intro[charCount];
+      setTimeout(greet2, speed);
     }
+
+    charCount++;
   }
 </script>
 
 <div class="component-conatiner relative">
-  <div class="console text-xl rounded w-full sm:w-72 lg:w-96 overflow-hidden">
+  <div class="console text-xl rounded w-full sm:w-80 lg:w-96 overflow-hidden">
     <header class="flex flex-row p-1 sm:p-2 gap-2 bg-gray-darkest">
       <span class="flex-auto" />
       <div class="rounded-lg p-1 sm:p-2 bg-gray" />
-      <div class="rounded-lg p-1 sm:p-2 bg-secondary" />
+      <div on:click={restart} class="rounded-lg p-1 sm:p-2 bg-secondary" />
       <div class="rounded-lg p-1 sm:p-2 bg-danger" />
     </header>
 
     <div
       class="content font-code bg-gray-dark h-full md:h-40 p-4 bg-opacity-70"
     >
-      <div class="block">
-        <span class="line">{greeting}</span>
-        <!-- {#if greetingAndNameSpaceFix}
-          <span class="opacity-0">|</span>
-        {/if} -->
-        <span class="italic text-corporateDark-primary"> {name}</span>
-        <span class="{cursor ? 'opacity-0' : ''} transition-opacity">|</span>
-      </div>
+      <span id="greeting" class="line">{greeting}</span>
+      <span id="name" class="italic text-corporateDark-primary">{name}</span>
+      <span class="cursor -ml-4">|</span>
     </div>
   </div>
 </div>
+
+<style>
+  .cursor {
+    animation: blink 1000ms infinite;
+  }
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+</style>

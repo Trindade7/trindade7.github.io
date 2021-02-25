@@ -1,7 +1,8 @@
 <!-- TODO: MOVE TO MENU ON MOBILE -->
 <footer
   class="flex flex-row flex-wrap justify-items-center gap-2 md:gap-4 px-4 pt-8
-  pb-16 md:p-8 border-t border-corporateDark-dark"
+  pb-16 md:p-8
+  "
 >
   <div class="footer-item">
     <strong>&copy; 2021</strong>
