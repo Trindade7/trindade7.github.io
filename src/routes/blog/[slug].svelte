@@ -94,12 +94,12 @@
 					<ButtonLinkArrow url="blog">All posts</ButtonLinkArrow>
 				</div>
 			</div>
-		</div>
 
-		<div class="web-mentions prose dark:prose-dark py-8">
-			<h3 class="p-4 text-2xl font-serif">WEBMENTIONS</h3>
+			<div class="web-mentions prose dark:prose-dark py-8">
+				<h3 class=" text-2xl">WEBMENTIONS</h3>
 
-			<h1 class="text-center text-4xl">COMMING SOON</h1>
+				<h1 class="text-center text-4xl">COMMING SOON</h1>
+			</div>
 		</div>
 	</PageTransitionWrapper>
 </article>
