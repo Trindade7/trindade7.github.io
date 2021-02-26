@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import TagList from "./TagList.svelte";
 
-  export let name = "Project name here";
+  export let title = "Project name here";
   export let description = `Cillum esse sint ea sunt labore quis dolore dolor mollit minim. Commodo
     laboris commodo culpa exercitation non enim officia ut sint anim Lorem ex
     deserunt cupidatat. Culpa officia magna quis magna ullamco do. Laboris enim
@@ -16,6 +16,7 @@
     | "svelte"
     | "nodejs"
     | "sapper" = "angular";
+  export let slug = "";
 
   let colorClass = "";
   let borderColorClass = "";
@@ -23,7 +24,7 @@
     colorClass = "text-tools-" + mainTool;
     borderColorClass = "border-tools-" + mainTool;
   });
-  export let tools: string[] = [];
+  export let tags: string[] = [];
 </script>
 
 <div
@@ -36,7 +37,7 @@
   <h3 class="text-xl font-bold py-4">
     <a
       class="hover:underline hover:{colorClass} transition-colors"
-      href="projects/id">{name}</a
+      href="projects/{slug}">{title}</a
     >
   </h3>
 
@@ -47,6 +48,6 @@
   <span class="flex-auto" />
 
   <div class="tags pt-4">
-    <TagList tags={tools} />
+    <TagList {tags} />
   </div>
 </div>

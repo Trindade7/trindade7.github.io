@@ -3,36 +3,36 @@
 	import PageTransitionWrapper from "../components/PageTransitionWrapper.svelte";
 	import ProjectCard from "../components/ProjectCard.svelte";
 	import WebDevAnimationConsole from "../components/web-animation/WebDevAnimationConsole.svelte";
-	import type { Project } from "../models/DataModels.svelte";
+	import type { Project } from "../models/DataModels";
 
 	let projects: Project[] = [
 		{
-			name: "Project name here",
+			title: "Project name here",
 			description:
 				"Aute eu duis ut eu ipsum officia eiusmod elit ad anim incididunt aute et. Culpa amet velit in culpa amet pariatur non non sit. Tempor ex cillum culpa occaecat id. Ad fugiat do laboris Lorem et elit. Velit do magna aliquip cupidatat aliqua ut anim magna et aute esse Lorem. Consequat quis duis elit velit elit in ullamco qui. Qui officia adipisicing reprehenderit cupidatat reprehenderit Lorem non irure cupidatat occaecat proident.",
 			mainTool: "python",
-			tools: ["ts", "firebase", "other"],
+			tags: ["ts", "firebase", "other"],
 		},
 		{
-			name: "Hello world",
+			title: "Hello world",
 			description:
 				"Laborum aliquip est Lorem reprehenderit anim adipisicing. Non elit reprehenderit id labore labore eu aute. Ut reprehenderit excepteur anim id commodo consequat. Ad nostrud esse deserunt qui labore ipsum incididunt laboris.",
 			mainTool: "nodejs",
-			tools: ["css", "firebase"],
+			tags: ["css", "firebase"],
 		},
 		{
-			name: "Our Space",
+			title: "Our Space",
 			description:
 				"Adipisicing cupidatat aliquip nulla ut anim laboris labore aliqua adipisicing elit.",
 			mainTool: "angular",
-			tools: ["sass", "firebase"],
+			tags: ["sass", "firebase"],
 		},
 		{
-			name: "Kuimba",
+			title: "Kuimba",
 			description:
 				"Reprehenderit sunt excepteur id aliqua sint ad occaecat nisi ut id consequat labore qui. Amet dolore consequat fugiat ex consequat ullamco exercitation Lorem enim proident laboris. Dolor laboris dolor culpa magna elit ut veniam consectetur. Irure voluptate aute aliqua quis excepteur.",
 			mainTool: "angular",
-			tools: ["sass", "firebase", "wasm", "rust"],
+			tags: ["sass", "firebase", "wasm", "rust"],
 		},
 	];
 </script>

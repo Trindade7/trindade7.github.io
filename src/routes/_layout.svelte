@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Nav from "../components/Nav.svelte";
-	import BottomAppBar from "../components/BottomAppBar.svelte";
 	import AppFooter from "../components/AppFooter.svelte";
 	import AppMenu from "../components/AppMenu.svelte";
 
