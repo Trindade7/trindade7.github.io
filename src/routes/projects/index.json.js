@@ -2,7 +2,7 @@ import projects from './_projects.js';
 
 const contents = JSON.stringify(projects.map(project => {
     return {
-      mainTool: project.tags.shift(),
+      mainTool: project.tags[0],
       tags: project.tags,
       title: project.title,
       description: project.description,

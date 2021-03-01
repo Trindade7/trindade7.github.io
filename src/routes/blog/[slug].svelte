@@ -1,10 +1,4 @@
 <script context="module" lang="ts">
-	import PageTransitionWrapper from "../../components/PageTransitionWrapper.svelte";
-
-	import ButtonLinkArrow from "../../components/ButtonLinkArrow.svelte";
-
-	import TagList from "../../components/TagList.svelte";
-
 	export async function preload({ params }) {
 		// the `slug` parameter is available because
 		// this file is called [slug].svelte
@@ -12,7 +6,9 @@
 		const data = await res.json();
 
 		if (res.status === 200) {
-			return { post: data };
+			return {
+				post: data,
+			};
 		} else {
 			this.error(res.status, data.message);
 		}
@@ -21,6 +17,9 @@
 
 <script lang="ts">
 	import { onMount } from "svelte";
+	import PageTransitionWrapper from "../../components/PageTransitionWrapper.svelte";
+	import ButtonLinkArrow from "../../components/ButtonLinkArrow.svelte";
+	import TagList from "../../components/TagList.svelte";
 
 	export let post: {
 		slug: string;
@@ -45,7 +44,7 @@
 	<title>{post.title}</title>
 </svelte:head>
 
-<article class="mx-auto max-w-4xl p-4 md:px-20 pt-10">
+<article class="mx-auto max-w-3xl p-4 pt-10">
 	<div class="flex flex-row pt-8 pb-4">
 		<small class="{colorClass} font-bold uppercase border-t-2 max-w-max">
 			{post.tags[0]}
@@ -91,7 +90,7 @@
 						>
 					</address>
 
-					<ButtonLinkArrow url="blog">All posts</ButtonLinkArrow>
+					<ButtonLinkArrow url={"blog"}>All posts</ButtonLinkArrow>
 				</div>
 			</div>
 		</div>

@@ -9,21 +9,6 @@
       this.error(res.status, data.message);
     }
   }
-
-  export async function preload({ params }) {
-    // the `slug` parameter is available because
-    // this file is called [slug].svelte
-    const res = await this.fetch(`blog/${params.slug}.json`);
-    const data = await res.json();
-
-    if (res.status === 200) {
-      return {
-        post: data,
-      };
-    } else {
-      this.error(res.status, data.message);
-    }
-  }
 </script>
 
 <script lang="ts">
@@ -33,7 +18,7 @@
   import TagList from "../../components/TagList.svelte";
   import ButtonLinkArrow from "../../components/ButtonLinkArrow.svelte";
 
-  export const project: ProjectModel = {
+  export let project: ProjectModel = {
     title: "No project",
     description: "",
     mainTool: "angular",
@@ -41,7 +26,10 @@
     tags: [],
   };
   let colorClass = "";
-  onMount(() => (colorClass = "text-tools-" + project.tags[0]));
+  onMount(() => {
+    colorClass = "text-tools-" + project.tags[0];
+    project.mainTool = project.tags[0] as any;
+  });
 </script>
 
 <svelte:head>
@@ -50,7 +38,7 @@
   <title>{project.title}</title>
 </svelte:head>
 
-<article class="mx-auto max-w-4xl p-4  pt-10">
+<article class="mx-auto max-w-3xl p-4  pt-10">
   <div class="flex flex-row pt-8 pb-4">
     <small class="{colorClass} font-bold uppercase border-t-2 max-w-max">
       {project.mainTool}
@@ -89,7 +77,6 @@
         <hr />
         <div class="pt-4 flex flex-row justify-between">
           <address class="author">
-            <span class="text-corporateDark-primary">{project.mainTool}</span>
             <a
               class="underline hover:text-corporateDark-primary"
               rel="author"

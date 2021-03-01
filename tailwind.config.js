@@ -13,7 +13,7 @@ module.exports = {
       sans: ['Open Sans', 'sans-serif'],
       // serif: ['Rokkitt', 'serif'],
       serif: ['Noto Serif', 'serif'],
-      code: ['Courier New', 'monospace', 'Cascadia Code']
+      code: ['Courier New', 'monospace', 'Cascadia Code','consolas', 'monospace']
     },
     colors: {
       gray: {

@@ -1,5 +1,5 @@
 <script>
-  export const url = "";
+  export const url = ".";
 </script>
 
 <strong>

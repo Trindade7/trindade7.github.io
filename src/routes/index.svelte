@@ -110,7 +110,7 @@
 			<header class="flex flex-row py-4">
 				<h3 class="text-2xl font-bold ">Projects</h3>
 				<span class="flex-auto" />
-				<ButtonLinkArrow>View all</ButtonLinkArrow>
+				<ButtonLinkArrow url={"projects"}>View all</ButtonLinkArrow>
 			</header>
 			<div class="projects py-8 flex flex-row flex-wrap gap-4">
 				{#each projects as project}
@@ -122,7 +122,7 @@
 			<div class="pb-4 flex flex-row">
 				<span class="flex-auto" />
 
-				<ButtonLinkArrow>All Projects</ButtonLinkArrow>
+				<ButtonLinkArrow url={"projects"}>All Projects</ButtonLinkArrow>
 			</div>
 		</section>
 	</div>
