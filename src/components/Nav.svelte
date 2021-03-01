@@ -9,8 +9,6 @@
 app-nav
 bg-corporateDark-darkest
 container
-mx-auto
-max-w-4xl
 p-4 flex">
 	<!-- <a aria-current={segment === undefined ? "page" : undefined} href=".">
 		<img class="h-12 w-12" src={logo} alt="T7" />
@@ -21,42 +19,60 @@ p-4 flex">
 			aria-current={segment === undefined ? "page" : undefined}
 			href="."
 		>
-			<span class="text-5xl text-corporateDark-primary">T</span>
+			<!-- <span class="text-5xl text-corporateDark-primary">T</span> -->
+			<img class="w-12 inline -mt-4" src={logo} alt="T7" />
 			<span
-				class="pt-2 -ml-1 hover:text-corporateDark-primary transition-colors"
-				>rindade</span
+				class="pl-4  -ml-1 hover:text-corporateDark-primary transition-colors"
+				>trindade</span
 			>
 		</a>
 	</div>
 
 	<span class="flex-auto" />
 
-	<ul class="hidden sm:flex flex-row uppercase">
-		<li
-			class="px-2 flex items-center   hover:text-corporateDark-primary transition-colors"
-		>
-			<a aria-current={segment === undefined ? "page" : undefined} href="."
-				>home</a
+	<ul class="hidden sm:flex flex-row-reverse uppercase">
+		<li>
+			<a
+				aria-current={segment === "about" ? "page" : undefined}
+				href="about"
+				class="px-2 flex items-center   hover:text-corporateDark-primary focus:text-corporateDark-primary {segment ===
+				'about'
+					? 'text-corporateDark-primary'
+					: ''} transition-colors"
+			>
+				about
+			</a>
+		</li>
+		<li>
+			<a
+				class="px-2 flex items-center   hover:text-corporateDark-primary focus:text-corporateDark-primary {segment ===
+				'projects'
+					? 'text-corporateDark-primary'
+					: ''} transition-colors"
+				rel="prefetch"
+				aria-current={segment === "projects" ? "page" : undefined}
+				href="projects">projects</a
 			>
 		</li>
-
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li
-			class="px-2 flex items-center   hover:text-corporateDark-primary transition-colors"
-		>
+		<li>
 			<a
+				class="px-2 flex items-center   hover:text-corporateDark-primary focus:text-corporateDark-primary {segment ===
+				'blog'
+					? 'text-corporateDark-primary'
+					: ''} transition-colors trasitio"
 				rel="prefetch"
 				aria-current={segment === "blog" ? "page" : undefined}
 				href="blog">blog</a
 			>
 		</li>
-
-		<li
-			class="px-2 flex items-center   hover:text-corporateDark-primary transition-colors"
-		>
-			<a aria-current={segment === "about" ? "page" : undefined} href="about"
-				>about</a
+		<li>
+			<a
+				class="px-2 flex items-center   hover:text-corporateDark-primary focus:text-corporateDark-primary {segment ===
+				undefined
+					? 'text-corporateDark-primary'
+					: ''} transition-colors"
+				aria-current={segment === undefined ? "page" : undefined}
+				href=".">home</a
 			>
 		</li>
 	</ul>
@@ -66,20 +82,14 @@ p-4 flex">
 			<svg
 				class="  w-8 h-8"
 				xmlns="http://www.w3.org/2000/svg"
-				enable-background="new 0 0 24 24"
-				viewBox="0 0 24 24"
-				width="18px"
-				height="18px"
-				><g><path d="M0,0h24v24H0V0z" fill="none" /></g><g
-					><g
-						><g
-							><path
-								d="M4,18h16c0.55,0,1-0.45,1-1l0,0c0-0.55-0.45-1-1-1H4c-0.55,0-1,0.45-1,1l0,0C3,17.55,3.45,18,4,18z M4,13h16 c0.55,0,1-0.45,1-1l0,0c0-0.55-0.45-1-1-1H4c-0.55,0-1,0.45-1,1l0,0C3,12.55,3.45,13,4,13z M3,7L3,7c0,0.55,0.45,1,1,1h16 c0.55,0,1-0.45,1-1l0,0c0-0.55-0.45-1-1-1H4C3.45,6,3,6.45,3,7z"
-							/></g
-						></g
-					></g
-				></svg
+				viewBox="0 0 20 20"
 			>
+				<path
+					fill-rule="evenodd"
+					d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z"
+					clip-rule="evenodd"
+				/>
+			</svg>
 		</ButtonIcon>
 	</div>
 </nav>

@@ -1,6 +1,40 @@
-<script>
+<script type="ts">
+	import ButtonLinkArrow from "../components/ButtonLinkArrow.svelte";
 	import PageTransitionWrapper from "../components/PageTransitionWrapper.svelte";
+	import ProjectCard from "../components/ProjectCard.svelte";
 	import WebDevAnimationConsole from "../components/web-animation/WebDevAnimationConsole.svelte";
+	import type { Project } from "../models/DataModels";
+
+	let projects: Project[] = [
+		{
+			title: "Project name here",
+			description:
+				"Aute eu duis ut eu ipsum officia eiusmod elit ad anim incididunt aute et. Culpa amet velit in culpa amet pariatur non non sit. Tempor ex cillum culpa occaecat id. Ad fugiat do laboris Lorem et elit. Velit do magna aliquip cupidatat aliqua ut anim magna et aute esse Lorem. Consequat quis duis elit velit elit in ullamco qui. Qui officia adipisicing reprehenderit cupidatat reprehenderit Lorem non irure cupidatat occaecat proident.",
+			mainTool: "python",
+			tags: ["ts", "firebase", "other"],
+		},
+		{
+			title: "Hello world",
+			description:
+				"Laborum aliquip est Lorem reprehenderit anim adipisicing. Non elit reprehenderit id labore labore eu aute. Ut reprehenderit excepteur anim id commodo consequat. Ad nostrud esse deserunt qui labore ipsum incididunt laboris.",
+			mainTool: "nodejs",
+			tags: ["css", "firebase"],
+		},
+		{
+			title: "Our Space",
+			description:
+				"Adipisicing cupidatat aliquip nulla ut anim laboris labore aliqua adipisicing elit.",
+			mainTool: "angular",
+			tags: ["sass", "firebase"],
+		},
+		{
+			title: "Kuimba",
+			description:
+				"Reprehenderit sunt excepteur id aliqua sint ad occaecat nisi ut id consequat labore qui. Amet dolore consequat fugiat ex consequat ullamco exercitation Lorem enim proident laboris. Dolor laboris dolor culpa magna elit ut veniam consectetur. Irure voluptate aute aliqua quis excepteur.",
+			mainTool: "angular",
+			tags: ["sass", "firebase", "wasm", "rust"],
+		},
+	];
 </script>
 
 <svelte:head>
@@ -12,18 +46,18 @@
 </svelte:head>
 
 <PageTransitionWrapper>
-	<div class="container flex flex-col mx-auto px-4 pt-9 md:pt-16">
-		<div class="intro flex flex-col sm:flex-row">
-			<div class="pb-4 sm:pr-4 ">
+	<div class="flex flex-col mx-auto px-4 pt-9 md:pt-16">
+		<div class="intro flex flex-col sm:flex-row pb-20">
+			<div class="pb-4 sm:pr-8 md:pr-11">
 				<WebDevAnimationConsole />
 			</div>
 
 			<div class="info md:pt-0">
 				<h1
-					class="text-5xl sm:text-7xl leading-tight space-y-1 pb-4 font-serif font-black"
+					class="text-5xl md:text-7xl leading-tight space-y-1 pb-4 font-serif font-black"
 				>
-					Striving for
-					<span class="text-corporateDark-primary"> awesome web apps </span>
+					Striving for awesome
+					<span class="text-corporateDark-primary"> web apps</span>
 				</h1>
 
 				<p class="py-4 text-xl">
@@ -31,9 +65,7 @@
 					Plus a sprincle of design, drawing and painting.
 				</p>
 
-				<div
-					class="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full flex flex-row gap-4 items-center"
-				>
+				<div class="mt-6 w-4/5 lg:w-full flex flex-row gap-4 items-center">
 					<a
 						aria-label="Github @Trindade7"
 						target="_blank"
@@ -71,6 +103,27 @@
 				</div>
 			</div>
 		</div>
-		<span class="flex-auto" />
+
+		<hr class=" text-gray" />
+
+		<section id="projects" class="projects-container pb-16">
+			<header class="flex flex-row py-4">
+				<h3 class="text-2xl font-bold ">Projects</h3>
+				<span class="flex-auto" />
+				<ButtonLinkArrow url={"projects"}>View all</ButtonLinkArrow>
+			</header>
+			<div class="projects py-8 flex flex-row flex-wrap gap-4">
+				{#each projects as project}
+					<div style="flex: 1 1 360px" class="project-card-container w-full ">
+						<ProjectCard {...project} />
+					</div>
+				{/each}
+			</div>
+			<div class="pb-4 flex flex-row">
+				<span class="flex-auto" />
+
+				<ButtonLinkArrow url={"projects"}>All Projects</ButtonLinkArrow>
+			</div>
+		</section>
 	</div>
 </PageTransitionWrapper>

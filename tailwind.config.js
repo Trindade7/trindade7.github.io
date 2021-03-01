@@ -13,6 +13,7 @@ module.exports = {
       sans: ['Open Sans', 'sans-serif'],
       // serif: ['Rokkitt', 'serif'],
       serif: ['Noto Serif', 'serif'],
+      code: ['Courier New', 'monospace', 'Cascadia Code','consolas', 'monospace']
     },
     colors: {
       gray: {
@@ -36,13 +37,30 @@ module.exports = {
         light: '#FF9F1C',
         lightest: '#FDFFFC',
       },
-      corporateDark: {
+      corporateDarkDefault: {
         darkest: '#050401',
         dark: '#303036',
         primary: '#FC5130',
         accent: '#30BCED',
         light: '#FFFAFF',
         lightest: '#FFFFFF',
+      },
+      corporateDark: {
+        darkest: '#040105',
+        dark: '#2c2c40',
+        primary: '#FC5130',
+        accent: '#30BCED',
+        light: '#FFFAFF',
+        lightest: '#FFFFFF',
+      },
+      tools: {
+        typescript: '#007ACC',
+        javascript: '#F7DF1E',
+        python: '#77add8',
+        angular: '#c40030',
+        svelte: '#FF3E00',
+        nodejs: '#6cbd4a',
+        sapper: '#159497',
       },
     },
     extend: {
@@ -56,19 +74,19 @@ module.exports = {
                 color: theme("colors.corporateDark.primary")
               },
             },
-            h1 :{
+            h1: {
               fontFamily: theme('text.serif'),
               color: theme("colors.corporateDark.darkest")
             },
-             h2 :{
+            h2: {
               fontFamily: theme('text.serif'),
               color: theme("colors.corporateDark.darkest")
             },
-             h3 :{
+            h3: {
               fontFamily: theme('text.serif'),
               color: theme("colors.corporateDark.darkest")
             },
-             h4:{
+            h4: {
               fontFamily: theme('text.serif'),
               color: theme("colors.corporateDark.darkest")
             },
@@ -86,16 +104,16 @@ module.exports = {
             a: {
               color: theme("colors.corporateDark.light"),
             },
-            h1 :{
+            h1: {
               color: theme("colors.corporateDark.lightest")
             },
-             h2 :{
+            h2: {
               color: theme("colors.corporateDark.lightest")
             },
-             h3 :{
+            h3: {
               color: theme("colors.corporateDark.lightest")
             },
-             h4:{
+            h4: {
               color: theme("colors.corporateDark.lightest")
             }
           },
@@ -106,9 +124,15 @@ module.exports = {
   },
   variants: {
     typography: ["dark"],
+    extend: {
+      padding: ['hover', 'focus'],
+      gap: ['hover', 'focus']
+    }
   },
   plugins: [
     require('@tailwindcss/typography'), // TODO: CDN?
+    require('@tailwindcss/line-clamp')
+
   ],
 };
 
