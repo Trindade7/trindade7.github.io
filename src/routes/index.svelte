@@ -122,7 +122,13 @@
 			<div class="pb-4 flex flex-row">
 				<span class="flex-auto" />
 
-				<ButtonLinkArrow url={"projects"}>All Projects</ButtonLinkArrow>
+				<ButtonLinkArrow url={"projects/our-space"}
+					>All Projects</ButtonLinkArrow
+				>
+				<ButtonLinkArrow url={"projects/our_space"}
+					>All Projects</ButtonLinkArrow
+				>
+				<ButtonLinkArrow url={"blog/first-post"}>All Projects</ButtonLinkArrow>
 			</div>
 		</section>
 	</div>

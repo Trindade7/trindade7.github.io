@@ -135,24 +135,3 @@ module.exports = {
 
   ],
 };
-
-// module.exports = {
-//   darkMode: "media", // you can use 'class' here or turn it off with 'false'
-//   purge: {
-//     mode: "all",
-//     content: ["./_site/**/*.html"],
-//   },
-//   theme: {
-//     extend: {
-//       colors: {
-//         dark: "#24283b",
-//       },
-
-
-//     },
-//   },
-//   variants: {
-//     typography: ["dark"],
-//   },
-//   plugins: [require("@tailwindcss/typography")],
-// };

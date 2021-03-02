@@ -7,7 +7,7 @@
     "dev:tailwindcss": "postcss static/tailwind.css -o static/main.css && sapper dev",
     "build:tailwindcss": "set NODE_ENV=production&& postcss static/tailwind.css -o static/main.css",
     "build": "npm run build:tailwindcss && sapper build --legacy",
-    "export": "npm run build:tailwindcss && sapper export --legacy",
+    "export": "npm run build:tailwindcss && sapper export --legacy --timeout=10000",
     "start": "node __sapper__/build",
     "deploy": "sapper export --legacy &&  gh-pages -d __sapper__/export",
     "validate": "svelte-check --ignore src/node_modules/@sapper"
