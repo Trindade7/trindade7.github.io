@@ -37,7 +37,8 @@
   <h3 class="text-xl font-bold py-4">
     <a
       class="hover:underline hover:{colorClass} transition-colors"
-      href="projects/{slug}">{title}</a
+      href="projects/{slug}"
+      rel="prefetch">{title}</a
     >
   </h3>
 

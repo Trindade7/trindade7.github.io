@@ -8,21 +8,19 @@
 <nav class="
 app-nav
 bg-corporateDark-darkest
-container
-p-4 flex">
+container flex">
 	<!-- <a aria-current={segment === undefined ? "page" : undefined} href=".">
 		<img class="h-12 w-12" src={logo} alt="T7" />
 	</a> -->
 	<div class="flex items-center ">
 		<a
-			class="font-serif italic  text-xl font-bold"
+			class="font-serif italic pl-4 text-xl font-bold flex items-center"
 			aria-current={segment === undefined ? "page" : undefined}
 			href="."
 		>
 			<!-- <span class="text-5xl text-corporateDark-primary">T</span> -->
-			<img class="w-12 inline -mt-4" src={logo} alt="T7" />
-			<span
-				class="pl-4  -ml-1 hover:text-corporateDark-primary transition-colors"
+			<img class="w-14 inline" src={logo} alt="T7" />
+			<span class="pl-2 pb-1 hover:text-corporateDark-primary transition-colors"
 				>trindade</span
 			>
 		</a>
@@ -30,7 +28,8 @@ p-4 flex">
 
 	<span class="flex-auto" />
 
-	<ul class="hidden sm:flex flex-row-reverse uppercase">
+	<ul class="hidden sm:flex
+	p-4 flex-row-reverse uppercase">
 		<li>
 			<a
 				aria-current={segment === "about" ? "page" : undefined}
@@ -77,10 +76,10 @@ p-4 flex">
 		</li>
 	</ul>
 
-	<div class="sm:hidden">
+	<div class="sm:hidden px-4 flex items-center">
 		<ButtonIcon ariaLabel={"Menu"}>
 			<svg
-				class="  w-8 h-8"
+				class="w-6 h-6"
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 20 20"
 			>
