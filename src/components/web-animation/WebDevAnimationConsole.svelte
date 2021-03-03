@@ -4,7 +4,7 @@
   onMount(() => {
     setTimeout(() => {
       greet(100);
-    }, 1500);
+    }, 500);
   });
 
   $: greeting = "";
@@ -25,7 +25,7 @@
       setTimeout(greet, speed);
     } else if (charCount === 9) {
       greeting += intro[charCount];
-      setTimeout(() => greet(), 1500);
+      setTimeout(() => greet(), 1000);
     } else if (charCount < intro.length) {
       name += intro[charCount];
       setTimeout(greet, speed);

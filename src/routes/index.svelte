@@ -3,9 +3,9 @@
 	import PageTransitionWrapper from "../components/PageTransitionWrapper.svelte";
 	import ProjectCard from "../components/ProjectCard.svelte";
 	import WebDevAnimationConsole from "../components/web-animation/WebDevAnimationConsole.svelte";
-	import type { Project } from "../models/DataModels";
+	import type { ProjectModel } from "../models/DataModels";
 
-	let projects: Project[] = [
+	let projects: ProjectModel[] = [
 		{
 			title: "Project name here",
 			description:
