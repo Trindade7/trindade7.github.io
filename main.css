@@ -604,11 +604,19 @@ img {
   color: #FFFAFF;
 }
 
+.dark .dark\:prose-dark a:hover {
+  color: #FC5130;
+}
+
 .dark .dark\:prose-dark h1 {
   color: #FFFFFF;
 }
 
 .dark .dark\:prose-dark h3 {
+  color: #FFFFFF;
+}
+
+.dark .dark\:prose-dark strong {
   color: #FFFFFF;
 }
 
@@ -685,6 +693,41 @@ img {
 .border-corporateDark-dark {
   --tw-border-opacity: 1;
   border-color: rgba(44, 44, 64, var(--tw-border-opacity));
+}
+
+.border-tools-typescript {
+  --tw-border-opacity: 1;
+  border-color: rgba(0, 122, 204, var(--tw-border-opacity));
+}
+
+.border-tools-javascript {
+  --tw-border-opacity: 1;
+  border-color: rgba(247, 223, 30, var(--tw-border-opacity));
+}
+
+.border-tools-python {
+  --tw-border-opacity: 1;
+  border-color: rgba(119, 173, 216, var(--tw-border-opacity));
+}
+
+.border-tools-angular {
+  --tw-border-opacity: 1;
+  border-color: rgba(196, 0, 48, var(--tw-border-opacity));
+}
+
+.border-tools-svelte {
+  --tw-border-opacity: 1;
+  border-color: rgba(255, 62, 0, var(--tw-border-opacity));
+}
+
+.border-tools-nodejs {
+  --tw-border-opacity: 1;
+  border-color: rgba(108, 189, 74, var(--tw-border-opacity));
+}
+
+.border-tools-sapper {
+  --tw-border-opacity: 1;
+  border-color: rgba(21, 148, 151, var(--tw-border-opacity));
 }
 
 .rounded {
@@ -1180,6 +1223,41 @@ img {
 .text-corporateDark-light {
   --tw-text-opacity: 1;
   color: rgba(255, 250, 255, var(--tw-text-opacity));
+}
+
+.text-tools-typescript {
+  --tw-text-opacity: 1;
+  color: rgba(0, 122, 204, var(--tw-text-opacity));
+}
+
+.text-tools-javascript {
+  --tw-text-opacity: 1;
+  color: rgba(247, 223, 30, var(--tw-text-opacity));
+}
+
+.text-tools-python {
+  --tw-text-opacity: 1;
+  color: rgba(119, 173, 216, var(--tw-text-opacity));
+}
+
+.text-tools-angular {
+  --tw-text-opacity: 1;
+  color: rgba(196, 0, 48, var(--tw-text-opacity));
+}
+
+.text-tools-svelte {
+  --tw-text-opacity: 1;
+  color: rgba(255, 62, 0, var(--tw-text-opacity));
+}
+
+.text-tools-nodejs {
+  --tw-text-opacity: 1;
+  color: rgba(108, 189, 74, var(--tw-text-opacity));
+}
+
+.text-tools-sapper {
+  --tw-text-opacity: 1;
+  color: rgba(21, 148, 151, var(--tw-text-opacity));
 }
 
 .hover\:text-corporateDark-primary:hover {
