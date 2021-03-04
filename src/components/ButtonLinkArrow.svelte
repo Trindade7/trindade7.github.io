@@ -1,24 +1,23 @@
 <script>
-  export const url = ".";
+  export let url = ".";
 </script>
 
 <strong>
   <a
     href={url}
     class="
-  flex
-  flex-row
-  gap-4
-  pr-1
-transition-all
-hover:pr-0
-hover:gap-5
-  hover:translate-x-10
-hover:text-corporateDark-primary
-focus:text-corporateDark-primary
-  focus:gap-5
-  focus:pr-0
-
+      flex
+      flex-row
+      gap-4
+      pr-1
+      transition-all
+      hover:pr-0
+      hover:gap-5
+      hover:translate-x-10
+    hover:text-corporateDark-primary
+    focus:text-corporateDark-primary
+      focus:gap-5
+      focus:pr-0
   "
   >
     <slot>Goto</slot>

@@ -7,9 +7,9 @@ export interface ProjectModel {
   | "svelte"
   | "nodejs"
   | "sapper";
-  slug: string;
   tags: string[];
   title: string;
   description: string;
+  slug?: string;
   html?: any;
 }

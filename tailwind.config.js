@@ -13,7 +13,7 @@ module.exports = {
       sans: ['Open Sans', 'sans-serif'],
       // serif: ['Rokkitt', 'serif'],
       serif: ['Noto Serif', 'serif'],
-      code: ['Courier New', 'monospace', 'Cascadia Code','consolas', 'monospace']
+      code: ['Courier New', 'monospace', 'Cascadia Code', 'consolas', 'monospace']
     },
     colors: {
       gray: {
@@ -103,6 +103,9 @@ module.exports = {
             color: theme("colors.corporateDark.light"),
             a: {
               color: theme("colors.corporateDark.light"),
+              "&:hover": {
+                color: theme("colors.corporateDark.primary")
+              },
             },
             h1: {
               color: theme("colors.corporateDark.lightest")
@@ -115,7 +118,13 @@ module.exports = {
             },
             h4: {
               color: theme("colors.corporateDark.lightest")
-            }
+            },
+            strong: {
+              color: theme("colors.corporateDark.lightest")
+            },
+            code: {
+              color: "#d3d5da"
+            },
           },
         },
       }),
