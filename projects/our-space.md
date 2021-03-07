@@ -22,4 +22,4 @@ For the styling, I wrote my own instead of relying on a library  because the pro
 ### Check it out
 
 The project is open source and can be found on [GitHub](https://github.com/Trindade7/our_space)
-under the MIT license. You are free to use/improve on it, if you fork it please refer the original Project &#x1f609;. To see the app in action check [here](https://isourspace.web.app/).
+under the MIT license. You are free to use/improve on it, if you fork it please refer the original Project &#x1f609;. To see the app in action check the [DEMO](https://isourspace.web.app/).

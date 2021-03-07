@@ -45,7 +45,7 @@
     </header>
 
     <div
-      class="content font-code bg-gray-dark h-full md:h-40 p-4 bg-opacity-70"
+      class="content font-code bg-gray-darkest h-full md:h-40 p-4 bg-opacity-70"
     >
       <span id="greeting" class="line">{greeting}</span>
       <span id="name" class="italic text-corporateDark-primary">{name}</span>
