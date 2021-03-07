@@ -4,7 +4,7 @@ description: "An app to share cards with your significant other. The users sign 
 tags: ["angular", "firebase", "typescript", "css"]
 slug: "our-space"
 images: ["https://placehold.it/100x100?text=user%20avatar"]
-gitUrl: "https://github.com/Trindade7/our_space"
+github: "https://github.com/Trindade7/our_space"
 webUrl: "https://isourspace.web.app/"
 ---
 

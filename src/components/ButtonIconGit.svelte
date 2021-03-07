@@ -13,7 +13,7 @@
     {href}
     data-tippy-content="@{id}"
     ><svg
-      class="w-6 h-6 {scale}"
+      class="w-6 h-6 fill-current {scale}"
       role="img"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"

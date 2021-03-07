@@ -7,7 +7,7 @@
 </script>
 
 <div class="app-conainer relative flex flex-col h-screen">
-	<div class="container flex flex-col w-full max-w-5xl mx-auto ">
+	<div class="container w-full max-w-4xl mx-auto ">
 		<Nav {segment} />
 	</div>
 
@@ -15,14 +15,14 @@
 		<AppMenu {segment} />
 	</div>
 
-	<main class="flex flex-col w-full max-w-5xl mx-auto  ">
+	<main class="w-full max-w-4xl mx-auto  ">
 		<slot />
 	</main>
 
 	<span class="flex-auto" />
 
 	<div class=" border-t border-corporateDark-dark">
-		<div class="w-full max-w-5xl mx-auto ">
+		<div class="w-full max-w-4xl mx-auto ">
 			<AppFooter />
 		</div>
 	</div>

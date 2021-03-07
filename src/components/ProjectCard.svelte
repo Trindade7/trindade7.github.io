@@ -14,6 +14,7 @@
     | "svelte"
     | "nodejs"
     | "sapper" = "angular";
+  export let github = "";
 
   const textColors = {
     typescript: "text-tools-typescript",
@@ -53,7 +54,7 @@
 
     <span class="flex-auto" />
 
-    <ButtonIconGit scale="scale-75" />
+    <ButtonIconGit href={github} scale="scale-75" />
   </div>
 
   <h3 class="text-xl font-bold py-4">

@@ -13,7 +13,7 @@ module.exports = {
       sans: ['Open Sans', 'sans-serif'],
       // serif: ['Rokkitt', 'serif'],
       serif: ['Noto Serif', 'serif'],
-      code: ['Courier New', 'monospace', 'Cascadia Code', 'consolas', 'monospace']
+      code: ['consolas', 'monospace','Courier New']
     },
     colors: {
       gray: {
@@ -57,7 +57,8 @@ module.exports = {
         typescript: '#007ACC',
         javascript: '#F7DF1E',
         python: '#77add8',
-        angular: '#c40030',
+        // angular: '#c40030',
+        angular: '#fa0146',
         svelte: '#FF3E00',
         nodejs: '#6cbd4a',
         sapper: '#159497',

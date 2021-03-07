@@ -6,7 +6,8 @@ const contents = JSON.stringify(projects.map(project => {
       tags: project.tags,
       title: project.title,
       description: project.description,
-      slug: project.slug
+      slug: project.slug,
+      github: project.github,
     };
   }));
 

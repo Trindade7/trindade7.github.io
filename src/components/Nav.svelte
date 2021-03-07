@@ -8,7 +8,7 @@
 <nav class="
 app-nav
 bg-corporateDark-darkest
-container flex">
+flex">
 	<!-- <a aria-current={segment === undefined ? "page" : undefined} href=".">
 		<img class="h-12 w-12" src={logo} alt="T7" />
 	</a> -->
@@ -19,7 +19,13 @@ container flex">
 			href="."
 		>
 			<!-- <span class="text-5xl text-corporateDark-primary">T</span> -->
-			<img class="w-14 inline" src={logo} alt="T7" />
+			<img
+				width="56px"
+				height="56px"
+				class="w-14 h-14 inline"
+				src={logo}
+				alt="Trindade7"
+			/>
 			<span class="pl-2 pb-1 hover:text-corporateDark-primary transition-colors"
 				>trindade</span
 			>

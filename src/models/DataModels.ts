@@ -12,4 +12,5 @@ export interface ProjectModel {
   description: string;
   slug?: string;
   html?: any;
+  github?: string;
 }

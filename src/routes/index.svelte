@@ -1,7 +1,6 @@
 <script type="ts">
 	import ButtonIconTwitter from "./../components/ButtonIconTwitter.svelte";
 	import ButtonIconGit from "./../components/ButtonIconGit.svelte";
-	import ButtonIconLink from "./../components/ButtonIconLink.svelte";
 	import ButtonLinkArrow from "../components/ButtonLinkArrow.svelte";
 	import PageTransitionWrapper from "../components/PageTransitionWrapper.svelte";
 	import ProjectCard from "../components/ProjectCard.svelte";
@@ -10,9 +9,18 @@
 
 	let projects: ProjectModel[] = [
 		{
+			title: "Our Space",
+			description:
+				"An app to share cards with your significant other. The users sign in, connect to each other accounts, then create and share cards among them.",
+			mainTool: "angular",
+			tags: ["angular", "firebase", "typescript", "css"],
+			github: "https://github.com/Trindade7/our_space",
+			slug: "our-space",
+		},
+		{
 			title: "Project name here",
 			description:
-				"Aute eu duis ut eu ipsum officia eiusmod elit ad anim incididunt aute et. Culpa amet velit in culpa amet pariatur non non sit. Tempor ex cillum culpa occaecat id. Ad fugiat do laboris Lorem et elit. Velit do magna aliquip cupidatat aliqua ut anim magna et aute esse Lorem. Consequat quis duis elit velit elit in ullamco qui. Qui officia adipisicing reprehenderit cupidatat reprehenderit Lorem non irure cupidatat occaecat proident.",
+				"Aute eu duis ut eu ipsum officia eiusmod elit ad anim incididunt aute et. Culpa amet velit in culpa amet pariatur non non sit. Tempor ex cillum culpa occaecat id. Ad fugiat do laboris Lorem et elit. ",
 			mainTool: "python",
 			tags: ["ts", "firebase", "other"],
 		},
@@ -22,13 +30,6 @@
 				"Laborum aliquip est Lorem reprehenderit anim adipisicing. Non elit reprehenderit id labore labore eu aute. Ut reprehenderit excepteur anim id commodo consequat. Ad nostrud esse deserunt qui labore ipsum incididunt laboris.",
 			mainTool: "nodejs",
 			tags: ["css", "firebase"],
-		},
-		{
-			title: "Our Space",
-			description:
-				"Adipisicing cupidatat aliquip nulla ut anim laboris labore aliqua adipisicing elit.",
-			mainTool: "angular",
-			tags: ["sass", "firebase"],
 		},
 		{
 			title: "Kuimba",
@@ -79,7 +80,7 @@
 
 		<section id="projects" class="projects-container pb-16">
 			<header class="flex flex-row py-4">
-				<h3 class="text-2xl font-bold ">Projects</h3>
+				<h2 class="text-2xl font-bold ">Projects</h2>
 				<span class="flex-auto" />
 				<ButtonLinkArrow url={"projects"}>View all</ButtonLinkArrow>
 			</header>
