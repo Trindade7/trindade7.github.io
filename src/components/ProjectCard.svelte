@@ -26,7 +26,7 @@
     svelte: "text-tools-svelte",
     nodejs: "text-tools-nodejs",
     sapper: "text-tools-sapper",
-    "c/c++": "text-tools-c/c++",
+    "c/c++": "text-tools-python",
   };
   const borderColors = {
     typescript: "border-tools-typescript",
@@ -36,7 +36,7 @@
     svelte: "border-tools-svelte",
     nodejs: "border-tools-nodejs",
     sapper: "border-tools-sapper",
-    "c/c++": "border-tools-c/c++",
+    "c/c++": "border-tools-python",
   };
 
   let colorClass = "";

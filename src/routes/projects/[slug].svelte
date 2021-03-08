@@ -41,7 +41,8 @@
   ];
 
   onMount(() => {
-    colorClass = "text-tools-" + project.tags[0];
+    const toolColor = project.tags[0] === "c/c++" ? "python" : project.tags[0]; // TODO: REMOVE TEMP FIX
+    colorClass = "text-tools-" + toolColor;
     project.mainTool = project.tags[0] as any;
   });
 </script>
