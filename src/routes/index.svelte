@@ -18,25 +18,31 @@
 			slug: "our-space",
 		},
 		{
-			title: "Project name here",
+			title: "mbed PID controller",
 			description:
-				"Aute eu duis ut eu ipsum officia eiusmod elit ad anim incididunt aute et. Culpa amet velit in culpa amet pariatur non non sit. Tempor ex cillum culpa occaecat id. Ad fugiat do laboris Lorem et elit. ",
-			mainTool: "python",
-			tags: ["ts", "firebase", "other"],
+				"A PID controller I created during my second year at New castle Univerity. It controls a buggie car that follows a line based on voltage variation detected by sensors attached to the car",
+			mainTool: "c/c++",
+			tags: ["c/c++", "mbed", "pid", "electronics"],
+			slug: "mbed-pid-controller",
+			github: "https://os.mbed.com/users/JTrindade/code/finall_ctrlr/",
 		},
 		{
-			title: "Hello world",
+			title: "trindade7.github",
 			description:
-				"Laborum aliquip est Lorem reprehenderit anim adipisicing. Non elit reprehenderit id labore labore eu aute. Ut reprehenderit excepteur anim id commodo consequat. Ad nostrud esse deserunt qui labore ipsum incididunt laboris.",
-			mainTool: "nodejs",
-			tags: ["css", "firebase"],
+				"My personal website, and the place you are reading this from. The app is built with Svelte, Sapper to be precise, and is hoted using github-pages.",
+			mainTool: "svelte",
+			slug: "trindade7",
+			tags: ["svelte", "sapper", "tailwindcss", "github-pages"],
+			github: "https://github.com/Trindade7/Trindade7.github.io",
 		},
 		{
-			title: "Kuimba",
+			title: "Pedacinhos de amor",
 			description:
-				"Reprehenderit sunt excepteur id aliqua sint ad occaecat nisi ut id consequat labore qui. Amet dolore consequat fugiat ex consequat ullamco exercitation Lorem enim proident laboris. Dolor laboris dolor culpa magna elit ut veniam consectetur. Irure voluptate aute aliqua quis excepteur.",
+				"A web store for a baking company built in Angular. It allows the user to check products, place and track orders online.",
+			slug: "pedacinhos-de-amor",
 			mainTool: "angular",
-			tags: ["sass", "firebase", "wasm", "rust"],
+			tags: ["angular", "ng-zorro", "less", "firebase"],
+			github: "https://github.com/Trindade7/proj-name",
 		},
 	];
 </script>

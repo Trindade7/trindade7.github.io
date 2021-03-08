@@ -35,24 +35,8 @@
     description?: string;
   }[] = [
     {
-      title: "share cards with your significant other",
-      description: `Eiusmod veniam velit veniam Lorem. Cupidatat veniam dolor quis aliquip excepteur duis laborum culpa ut velit. Ipsum laboris esse esse elit et ea. Cupidatat aute nostrud irure consequat id voluptate et veniam. In labore esse Lorem reprehenderit qui cillum ad. Sunt quis reprehenderit eu consectetur aute labore. Occaecat laboris culpa incididunt nisi adipisicing voluptate officia adipisicing velit aute eu.`,
-    },
-    {
-      title: "sign in",
-      description: `Cupidatat aute nostrud irure consequat id voluptate et veniam. In labore esse Lorem reprehenderit qui cillum ad. Sunt quis reprehenderit eu consectetur aute labore. Occaecat laboris culpa incididunt nisi adipisicing voluptate officia adipisicing velit aute eu.`,
-    },
-    {
-      title: "connect to each other accounts",
-      description: `  Ipsum laboris esse esse elit et ea. Cupidatat aute nostrud irure consequat id voluptate et veniam. In labore esse Lorem reprehenderit qui cillum ad. Sunt quis reprehenderit eu consectetur aute labore. .`,
-    },
-    {
-      title: "create and share cards ",
-      description: `  Ipsum laboris esse esse elit et ea. Cupidatat aute nostrud irure consequat id voluptate et veniam. In labore esse Lorem reprehenderit qui cillum ad. Sunt quis reprehenderit eu consectetur aute labore. .`,
-    },
-    {
-      title: "read your collective cards",
-      description: `  Ipsum laboris esse esse elit et ea. Cupidatat aute nostrud irure consequat id voluptate et veniam. In labore esse Lorem reprehenderit qui cillum ad. Sunt quis reprehenderit eu consectetur aute labore. .`,
+      title: "images Coming soon",
+      description: `A list of images of the projects will be available soon, in the meantime please visit the demos/code to explore the proects`,
     },
   ];
 
@@ -95,9 +79,11 @@
         {project.description}
       </p>
     </div>
+
     <div class="overview" id="overview">
       <CarouselAccordion items={overview} />
     </div>
+
     <div class="content text-lg  py-4  prose  max-w-2xl m-auto dark:prose-dark">
       {@html project.html}
     </div>
@@ -110,7 +96,7 @@
         <div class="pt-4 flex flex-row justify-between">
           <address class="author">
             <a
-              class="underline hover:text-corporateDark-primary"
+              class="underline text-corporateDark-primary hover:no-underline"
               rel="author"
               href=".">José Trindade</a
             >

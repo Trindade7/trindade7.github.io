@@ -30,15 +30,12 @@
       where the client allows me to list them!
     </p>
 
-    <ul class="sm:flex sm:flex-row sm:flex-wrap sm:gap-6">
-      {#each projects as project, index}
-        <li class="py-4 flex-1">
+    <div class="projects py-8 flex flex-row flex-wrap gap-4">
+      {#each projects as project}
+        <div style="flex: 1 1 360px" class="project-card-container w-full ">
           <ProjectCard {...project} />
-        </li>
-        {#if index !== projects.length - 1}
-          <hr class="text-corporateDark-light dark:text-corporateDark-dark" />
-        {/if}
+        </div>
       {/each}
-    </ul>
+    </div>
   </div>
 </PageTransitionWrapper>

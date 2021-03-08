@@ -7,10 +7,12 @@
   export let title = "Project name here";
   export let description = `A summary of the app`;
   export let mainTool:
+    | "angular"
+    | "flutter"
+    | "c/c++"
     | "typescript"
     | "javascript"
     | "python"
-    | "angular"
     | "svelte"
     | "nodejs"
     | "sapper" = "angular";
@@ -24,6 +26,7 @@
     svelte: "text-tools-svelte",
     nodejs: "text-tools-nodejs",
     sapper: "text-tools-sapper",
+    "c/c++": "text-tools-c/c++",
   };
   const borderColors = {
     typescript: "border-tools-typescript",
@@ -33,6 +36,7 @@
     svelte: "border-tools-svelte",
     nodejs: "border-tools-nodejs",
     sapper: "border-tools-sapper",
+    "c/c++": "border-tools-c/c++",
   };
 
   let colorClass = "";

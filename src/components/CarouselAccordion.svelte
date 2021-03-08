@@ -3,6 +3,7 @@
   import { cubicInOut } from "svelte/easing";
   import { to_number } from "svelte/internal";
 
+  export let isAnimated = false;
   export let tDuration = 5000;
   export let items: {
     title: string;
@@ -28,7 +29,9 @@
   function selectItem(index: number) {
     window.clearTimeout(activeTimeout);
     active = index;
-    iterate();
+    if (isAnimated) {
+      iterate();
+    }
   }
 
   /**

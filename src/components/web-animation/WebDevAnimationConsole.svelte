@@ -45,11 +45,11 @@
     </header>
 
     <div
-      class="content font-code bg-gray-darkest h-full md:h-40 p-4 bg-opacity-70"
+      class="content font-mono bg-gray-darkest h-full md:h-40 p-4 bg-opacity-70"
     >
       <span id="greeting" class="line">{greeting}</span>
       <span id="name" class="italic text-corporateDark-primary">{name}</span>
-      <span class="cursor {greeting.length ? '-ml-4' : ''}">|</span>
+      <span class="cursor {greeting.length ? '-ml-3' : ''}">|</span>
     </div>
   </div>
 </div>

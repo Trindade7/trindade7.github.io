@@ -88,7 +88,7 @@
 					<address class="author">
 						<time class="block" datetime={post.pubDate}>{post.pubDate}</time>
 						<a
-							class="underline hover:text-corporateDark-primary"
+							class="underline text-corporateDark-primary hover:no-underline"
 							rel="author"
 							href=".">{post.author}</a
 						>
