@@ -1,22 +1,23 @@
 <script type="ts">
+  import ButtonIconGit from "./ButtonIconGit.svelte";
   import { onMount } from "svelte";
   import TagList from "./TagList.svelte";
 
   export let slug = "";
   export let title = "Project name here";
-  export let description = `Cillum esse sint ea sunt labore quis dolore dolor mollit minim. Commodo
-    laboris commodo culpa exercitation non enim officia ut sint anim Lorem ex
-    deserunt cupidatat. Culpa officia magna quis magna ullamco do. Laboris enim
-    reprehenderit esse aliquip consequat occaecat commodo.`;
-
+  export let description = `A summary of the app`;
   export let mainTool:
+    | "angular"
+    | "flutter"
+    | "c/c++"
     | "typescript"
     | "javascript"
     | "python"
-    | "angular"
     | "svelte"
     | "nodejs"
     | "sapper" = "angular";
+  export let github = "";
+
   const textColors = {
     typescript: "text-tools-typescript",
     javascript: "text-tools-javascript",
@@ -25,6 +26,7 @@
     svelte: "text-tools-svelte",
     nodejs: "text-tools-nodejs",
     sapper: "text-tools-sapper",
+    "c/c++": "text-tools-python",
   };
   const borderColors = {
     typescript: "border-tools-typescript",
@@ -34,6 +36,7 @@
     svelte: "border-tools-svelte",
     nodejs: "border-tools-nodejs",
     sapper: "border-tools-sapper",
+    "c/c++": "border-tools-python",
   };
 
   let colorClass = "";
@@ -48,9 +51,15 @@
 <div
   class="{borderColorClass} project-card border-l-4  p-8 rounded bg-corporateDark-dark w-full h-full flex flex-col"
 >
-  <small class="{colorClass} font-bold uppercase py-1 border-t-2 max-w-max">
-    {mainTool}
-  </small>
+  <div class="flex flex-row gap-2 pb-1">
+    <small class="{colorClass} font-bold uppercase py-1 border-t-2 max-w-max">
+      {mainTool}
+    </small>
+
+    <span class="flex-auto" />
+
+    <ButtonIconGit href={github} scale="scale-75" />
+  </div>
 
   <h3 class="text-xl font-bold py-4">
     <a
@@ -66,7 +75,7 @@
 
   <span class="flex-auto" />
 
-  <div class="tags pt-4">
+  <div class="tags pt-5">
     <TagList {tags} />
   </div>
 </div>

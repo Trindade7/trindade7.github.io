@@ -13,7 +13,7 @@ module.exports = {
       sans: ['Open Sans', 'sans-serif'],
       // serif: ['Rokkitt', 'serif'],
       serif: ['Noto Serif', 'serif'],
-      code: ['Courier New', 'monospace', 'Cascadia Code', 'consolas', 'monospace']
+      mono: ['consolas', 'monospace','Courier New']
     },
     colors: {
       gray: {
@@ -50,14 +50,16 @@ module.exports = {
         dark: '#2c2c40',
         primary: '#FC5130',
         accent: '#30BCED',
-        light: '#FFFAFF',
+        light: '#ffffffe6',
         lightest: '#FFFFFF',
       },
       tools: {
         typescript: '#007ACC',
         javascript: '#F7DF1E',
         python: '#77add8',
-        angular: '#c40030',
+        "c/c++": '#77add8',
+        flutter: '#45d1fd',
+        angular: '#fa0146',
         svelte: '#FF3E00',
         nodejs: '#6cbd4a',
         sapper: '#159497',
@@ -69,25 +71,25 @@ module.exports = {
           css: {
             color: theme("colors.corporateDark.dark"),
             a: {
-              color: theme("colors.corporateDark.dark"),
+              color: theme("colors.corporateDark.primary"),
+              textDecoration:"none",
               "&:hover": {
-                color: theme("colors.corporateDark.primary")
+                textDecoration:"underline",
               },
             },
             h1: {
-              fontFamily: theme('text.serif'),
+              fontFamily: theme('fontFamily.serif').join(','),
               color: theme("colors.corporateDark.darkest")
             },
             h2: {
-              fontFamily: theme('text.serif'),
+              fontFamily: theme('fontFamily.serif').join(','),
               color: theme("colors.corporateDark.darkest")
             },
             h3: {
-              fontFamily: theme('text.serif'),
+              fontFamily: theme('fontFamily.serif').join(','),
               color: theme("colors.corporateDark.darkest")
             },
             h4: {
-              fontFamily: theme('text.serif'),
               color: theme("colors.corporateDark.darkest")
             },
 
@@ -101,12 +103,7 @@ module.exports = {
         dark: {
           css: {
             color: theme("colors.corporateDark.light"),
-            a: {
-              color: theme("colors.corporateDark.light"),
-              "&:hover": {
-                color: theme("colors.corporateDark.primary")
-              },
-            },
+
             h1: {
               color: theme("colors.corporateDark.lightest")
             },
@@ -127,7 +124,7 @@ module.exports = {
             },
           },
         },
-      }),
+      })
     }
 
   },

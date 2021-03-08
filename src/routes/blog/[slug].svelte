@@ -36,6 +36,10 @@
 </script>
 
 <svelte:head>
+	<link
+		rel="stylesheet"
+		href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/dracula.min.css"
+	/>
 	<meta
 		name="Description"
 		content={`${post.lead}, Author: ${post.author}, Category: Post`}
@@ -84,7 +88,7 @@
 					<address class="author">
 						<time class="block" datetime={post.pubDate}>{post.pubDate}</time>
 						<a
-							class="underline hover:text-corporateDark-primary"
+							class="underline text-corporateDark-primary hover:no-underline"
 							rel="author"
 							href=".">{post.author}</a
 						>

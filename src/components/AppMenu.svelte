@@ -74,7 +74,10 @@
 
   <div class="flex justify-end">
     <div on:click={toggle}>
-      <ButtonIcon>
+      <ButtonIcon
+        elevated={true}
+        ariaLabel={active ? "open menu" : "close menu"}
+      >
         {#if active}
           <svg
             class="w-7"

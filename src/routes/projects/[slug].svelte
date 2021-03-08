@@ -1,4 +1,5 @@
 <script context="module" lang="ts">
+  import CarouselAccordion from "../../components/CarouselAccordion.svelte";
   export async function preload({ params }) {
     const res = await this.fetch(`projects/${params.slug}.json`);
     const data = await res.json();
@@ -26,8 +27,22 @@
     tags: [],
   };
   let colorClass = "";
+
+  let overview: {
+    title: string;
+    imageUrl?: string;
+    imageAlt?: string;
+    description?: string;
+  }[] = [
+    {
+      title: "images Coming soon",
+      description: `A list of images of the projects will be available soon, in the meantime please visit the demos/code to explore the proects`,
+    },
+  ];
+
   onMount(() => {
-    colorClass = "text-tools-" + project.tags[0];
+    const toolColor = project.tags[0] === "c/c++" ? "python" : project.tags[0]; // TODO: REMOVE TEMP FIX
+    colorClass = "text-tools-" + toolColor;
     project.mainTool = project.tags[0] as any;
   });
 </script>
@@ -66,6 +81,10 @@
       </p>
     </div>
 
+    <div class="overview" id="overview">
+      <CarouselAccordion items={overview} />
+    </div>
+
     <div class="content text-lg  py-4  prose  max-w-2xl m-auto dark:prose-dark">
       {@html project.html}
     </div>
@@ -78,7 +97,7 @@
         <div class="pt-4 flex flex-row justify-between">
           <address class="author">
             <a
-              class="underline hover:text-corporateDark-primary"
+              class="underline text-corporateDark-primary hover:no-underline"
               rel="author"
               href=".">José Trindade</a
             >
@@ -95,3 +114,18 @@
     </div>
   </PageTransitionWrapper>
 </article>
+
+<style>
+  article {
+    -webkit-scroll-snap-align: top;
+    -webkit-scroll-snap-type: proximity;
+    scroll-snap-align: top;
+    scroll-snap-type: proximity;
+  }
+  #overview {
+    -webkit-scroll-snap-align: top;
+    -webkit-scroll-snap-type: proximity;
+    scroll-snap-align: top;
+    scroll-snap-type: proximity;
+  }
+</style>
