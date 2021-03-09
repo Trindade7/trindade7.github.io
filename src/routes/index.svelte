@@ -27,7 +27,7 @@
 			github: "https://os.mbed.com/users/JTrindade/code/finall_ctrlr/",
 		},
 		{
-			title: "trindade7.github",
+			title: "trindade7",
 			description:
 				"My personal website, and the place you are reading this from. The app is built with Svelte, Sapper to be precise, and is hoted using github-pages.",
 			mainTool: "svelte",
